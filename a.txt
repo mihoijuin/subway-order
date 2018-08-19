@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 aaa
-ccc
+bbb
 ddd
