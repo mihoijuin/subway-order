@@ -1,5 +1,7 @@
 # サブウェイの注文を事前に考えられる@コマンドライン操作
 
+# TODO 処理コードと表示コードを分ける
+
 #? 繰り返し処理にできないかな？
 title = '==== {num}.{item}の注文 ==='
 
@@ -81,10 +83,16 @@ print('''
         vege=sand_prices['ベジーデライト']
 ))
 
-# TODO 数字以外の値が入れられたとき、エラー処理を入れる
-sand_num = int(input('注文したいサンドの数字を選んでね: '))
-user_sand = sand_dict[sand_num]
-print('それでは{}のカスタマイズを作っていこう！'.format(user_sand))
+while True:
+    try:
+        sand_num = input('注文したいサンドの数字を選んでね: ')
+        sand_num = int(sand_num)
+        user_sand = sand_dict[sand_num]
+        print('それでは{}のカスタマイズを作っていこう！'.format(user_sand))
+        break
+    except:
+        print('誤った値が入力されるみたい。。。もう一度やり直してみて！')
+
 
 # パン
 print(title.format(num=2, item='パン'))
@@ -99,16 +107,21 @@ elif sand_num in [3, 10]:
 else:
     print('*{}のオススメはフラットブレッドだよ'.format(user_sand))
 
-bread_num =  int(input('選びたいパンの数字を入力してね: '))
-bread_dict = {
-    1: 'ハニーオーツ',
-    2: 'ウィート',
-    3: 'セサミ',
-    4: 'ホワイト',
-    5: 'フラットブレッド'
-}
-user_bread = bread_dict[bread_num]
-print('{}を選択したよ！'.format(user_bread))
+while True:
+    try:
+        bread_num =  int(input('選びたいパンの数字を入力してね: '))
+        bread_dict = {
+            1: 'ハニーオーツ',
+            2: 'ウィート',
+            3: 'セサミ',
+            4: 'ホワイト',
+            5: 'フラットブレッド'
+        }
+        user_bread = bread_dict[bread_num]
+        print('{}を選択したよ！'.format(user_bread))
+        break
+    except:
+        print('誤った値が入力されるみたい。。。もう一度やり直してみて！')
 
 
 # トッピング
@@ -151,20 +164,25 @@ print('''
 ))
 
 # TODO トッピングを複数選択できるようにする
-topping_num = int(input('選びたいトッピングの数字を入力してね: '))
-topping_dict ={
-    0: 'トッピングなし',
-    1: 'スライスチーズ',
-    2: 'クリームタイプチーズ',
-    3: 'マスカルポーネチーズ',
-    4: 'たまご',
-    5: 'ベーコン',
-    6: 'ツナ',
-    7: 'えび',
-    8: 'アボカド'
-}
-user_topping = topping_dict[topping_num]
-print('{}を選択したよ！'.format(user_topping))
+while True:
+    try:
+        topping_num = int(input('選びたいトッピングの数字を入力してね: '))
+        topping_dict ={
+            0: 'トッピングなし',
+            1: 'スライスチーズ',
+            2: 'クリームタイプチーズ',
+            3: 'マスカルポーネチーズ',
+            4: 'たまご',
+            5: 'ベーコン',
+            6: 'ツナ',
+            7: 'えび',
+            8: 'アボカド'
+        }
+        user_topping = topping_dict[topping_num]
+        print('{}を選択したよ！'.format(user_topping))
+        break
+    except:
+        print('誤った値が入力されるみたい。。。もう一度やり直してみて！')
 
 
 # 野菜
@@ -185,14 +203,21 @@ print('''ちなみに管理人のお気に入りは
 veges = ['レタス', 'トマト', 'オニオン',  'ニンジン', 'オリーブ', 'ピクルス', 'ホットペッパー']
 
 amount_dict = {1: '通常量', 2: '多め', 3: '上限', 4: '少なめ', 5: '抜き'}
-user_veges = []
-for vege in veges:
-    veg_num = int(input('{}の量（1: 通常量, 2: 多め, 3: 上限, 4: 少なめ 5: 抜き）: '.format(vege)))
-    user_veges.append(amount_dict[veg_num])
 
-print('選択した野菜の量')
-for vege in veges:
-    print('- {0}: {1}'.format(vege, user_veges[veges.index(vege)]))
+while True:
+    try:
+        user_veges = []
+        for vege in veges:
+            veg_num = int(input('{}の量（1: 通常量, 2: 多め, 3: 上限, 4: 少なめ 5: 抜き）: '.format(vege)))
+            user_veges.append(amount_dict[veg_num])
+
+        print('選択した野菜の量')
+        for vege in veges:
+            print('- {0}: {1}'.format(vege, user_veges[veges.index(vege)]))
+        break
+    except:
+        print('誤った値が入力されるみたい。。。もう一度やり直してみて！')
+
 
 
 # ドレッシング
@@ -211,21 +236,25 @@ print('''
     9: チリソース
 ''')
 
-souce_num = int(input('かけたいドレッシングの番号を入力してね: '))
-souce_dict = {
-    1: 'オイル&ビネガー　塩コショウ',
-    2: 'シーザードレッシング',
-    3: '野菜クリーミードレッシング',
-    4: 'ハニーマスタードソース',
-    5: 'わさび醤油ソース',
-    6: 'バジルソース',
-    7: 'バルサミコソース',
-    8: 'マヨネーズタイプ',
-    9: 'チリソース'
-}
-user_souce = souce_dict[souce_num]
-print('{}を選択したよ！'.format(user_souce))
-
+while True:
+    try:
+        souce_num = int(input('かけたいドレッシングの番号を入力してね: '))
+        souce_dict = {
+            1: 'オイル&ビネガー　塩コショウ',
+            2: 'シーザードレッシング',
+            3: '野菜クリーミードレッシング',
+            4: 'ハニーマスタードソース',
+            5: 'わさび醤油ソース',
+            6: 'バジルソース',
+            7: 'バルサミコソース',
+            8: 'マヨネーズタイプ',
+            9: 'チリソース'
+        }
+        user_souce = souce_dict[souce_num]
+        print('{}を選択したよ！'.format(user_souce))
+        break
+    except:
+        print('誤った値が入力されるみたい。。。もう一度やり直してみて！')
 
 
 # 結果
