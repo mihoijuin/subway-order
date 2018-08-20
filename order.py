@@ -166,7 +166,6 @@ print('''
 # TODO トッピングを複数選択できるようにする
 while True:
     try:
-        topping_num = int(input('選びたいトッピングの数字を入力してね: '))
         topping_dict ={
             0: 'トッピングなし',
             1: 'スライスチーズ',
@@ -178,8 +177,13 @@ while True:
             7: 'えび',
             8: 'アボカド'
         }
-        user_topping = topping_dict[topping_num]
-        print('{}を選択したよ！'.format(user_topping))
+        topping_times = int(input('何個トッピングする？数字を入力してね！: '))
+        user_toppings = []
+        for i in range(1, topping_times+1):
+            topping_num = int(input('{}こ目の選びたいトッピングの数字を入力してね: '.format(i)))
+            user_topping = topping_dict[topping_num]
+            user_toppings.append(user_topping)
+            print('{}を選択したよ！'.format(user_topping))
         break
     except:
         print('誤った値が入力されるみたい。。。もう一度やり直してみて！')
@@ -238,7 +242,6 @@ print('''
 
 while True:
     try:
-        souce_num = int(input('かけたいドレッシングの番号を入力してね: '))
         souce_dict = {
             1: 'オイル&ビネガー　塩コショウ',
             2: 'シーザードレッシング',
@@ -250,8 +253,13 @@ while True:
             8: 'マヨネーズタイプ',
             9: 'チリソース'
         }
-        user_souce = souce_dict[souce_num]
-        print('{}を選択したよ！'.format(user_souce))
+        souce_times = int(input('ドレッシングは何種類でもかけられるよ！何種類かける？数字を入力してね！:'))
+        user_souces = []
+        for i in range(1, souce_times+1):
+            souce_num = int(input('{}種類目のドレッシングの番号を入力してね: '.format(i)))
+            user_souce = souce_dict[souce_num]
+            user_souces.append(user_souce)
+            print('{}を選択したよ！'.format(user_souce))
         break
     except:
         print('誤った値が入力されるみたい。。。もう一度やり直してみて！')
@@ -259,11 +267,23 @@ while True:
 
 # 結果
 print(title.format(num=6, item='結果'))
+
 print('サンドイッチ: ', user_sand)
-print('パン: ', user_bread)
-print('トッピング: ', user_topping)
-print('野菜')
+
+print('【パン】', user_bread)
+
+topping_price = 0   # トッピング合計額を計算する用
+for user_topping in user_toppings:
+    print('【トッピング】')
+    print('-', user_topping)
+    # ここでトッピングの合計額を計算する
+    topping_price += topping_prices[user_topping]
+
+print('【野菜】')
 for vege in veges:
     print('- {0}: {1}'.format(vege, user_veges[veges.index(vege)]))
-print('ドレッシング: ', user_souce)
-print('++ 値段：{}円 ++'.format(sand_prices[user_sand] + topping_prices[user_topping]))
+
+print('【ドレッシング】')
+for souce in user_souces:
+    print('- ', souce)
+print('++ 【合計額】：{}円 ++'.format(sand_prices[user_sand] + topping_price))
