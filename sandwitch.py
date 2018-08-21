@@ -76,6 +76,9 @@ class SandOrder():
     def title(self, index, item):
         return '=== {}.{} ==='.format(index, item)
 
+    def show_choice(self, item):
+        return '{}を選択したよ！'.format(item)
+
     def table(self, item):
         if item == 'sand':
             sand_prices = self.sand_prices
