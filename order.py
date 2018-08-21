@@ -11,14 +11,13 @@ sand = sandwitch.SandOrder()
 #? 選択するまでの流れを一つの関数にまとめられないかなー、引数を指定する形で
 print(sand.show_info(1, 'サンド'))
 sands = sand.sands
-flag = False
-while flag == False:
+while True:
     try:
         sand_num = int(input('注文したいサンドの数字を選んでね: '))
         user_sand = sands[sand_num]
-        flag = True
+        break
     except:
-        flag = False
+        continue
 print('{}を選択したよ！'.format(user_sand))
 
 # パン
@@ -83,7 +82,7 @@ while True:
         break
     except:
         continue
-        
+
 # 結果
 print(title.format(num=6, item='結果'))
 
