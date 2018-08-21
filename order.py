@@ -11,38 +11,16 @@ sand = sandwitch.Sand(1, 'サンド')
 print('こちらのサイトでそれぞれのサンドの写真が見れるよ！：{}'.format(sand.official_site()))
 print(sand.table_sand())
 print(sand.attention())
-print(sand.choose_sand())
 
 
 # パン
-print(title.format(num=2, item='パン'))
-print('1:ハニーオーツ, 2:ウィート, 3:セサミ, 4:ホワイト, 5:フラットブレッド')
+bread = sandwitch.Bread(2, 'パン')
 
-if sand_num in [2, 5, 6, 8, 12]:
-    print('＊{}のオススメはハニーオーツだよ'.format(user_sand))
-elif sand_num in [1, 9, 14, 15]:
-    print('＊{}のオススメはウィートだよ'.format(user_sand))
-elif sand_num in [3, 10]:
-    print('*{}のオススメはセサミだよ'.format(user_sand))
-else:
-    print('*{}のオススメはフラットブレッドだよ'.format(user_sand))
-
-while True:
-    try:
-        bread_num =  int(input('選びたいパンの数字を入力してね: '))
-        bread_dict = {
-            1: 'ハニーオーツ',
-            2: 'ウィート',
-            3: 'セサミ',
-            4: 'ホワイト',
-            5: 'フラットブレッド'
-        }
-        user_bread = bread_dict[bread_num]
-        print('{}を選択したよ！'.format(user_bread))
-        break
-    except:
-        print('誤った値が入力されるみたい。。。もう一度やり直してみて！')
-
+print(bread.title())
+print(bread.table_bread())
+print(bread.show_recommends())
+print(bread.attention())
+print(bread.choose_bread())
 
 # トッピング
 topping_prices = {
