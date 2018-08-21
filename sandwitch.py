@@ -1,6 +1,7 @@
 class SandOrder():
     '''サンドイッチ注文で繰り返し使用する変数や関数をまとめたクラス'''
     def __init__(self):
+        # サンド
         self.sands ={
                 1: 'ローストビーフ',
                 2: '生ハムマスカルポーネ',
@@ -35,6 +36,8 @@ class SandOrder():
             'べジーチーズ': 340,
             'ベジーデライト': 300
         }
+
+        # パン
         self.breads = {
             1: 'ハニーオーツ',
             2: 'ウィート',
@@ -42,6 +45,8 @@ class SandOrder():
             4: 'ホワイト',
             5: 'フラットブレッド'
         }
+
+        # トッピング
         self.toppings = {
             0: 'トッピングなし',
             1: 'スライスチーズ',
@@ -64,8 +69,11 @@ class SandOrder():
             'えび': 100,
             'アボカド': 100
         }
+        # 野菜
         self.amount_dict = {1: '通常量', 2: '多め', 3: '上限', 4: '少なめ', 5: '抜き'}
         self.veges = ['レタス', 'トマト', 'オニオン',  'ニンジン', 'オリーブ', 'ピクルス', 'ホットペッパー']
+
+        # ドレッシング
         self.souces = {
             1: 'オイル&ビネガー　塩コショウ',
             2: 'シーザードレッシング',
@@ -79,6 +87,7 @@ class SandOrder():
         }
 
     def show_url(self):
+        '''サブウェイ公式サイトへのURLを表示'''
         url = 'https://www.subway.co.jp/menu/sandwich/'
         return 'こちらのサイトで写真が見れるよ！：{}'.format(url)
 
@@ -92,6 +101,7 @@ class SandOrder():
         return '{}を選択したよ！'.format(item)
 
     def table(self, item):
+        '''引数に指定した項目の情報一覧を表示'''
         if item == 'サンド':
             sand_prices = self.sand_prices
             return '''+ サンドイッチの選択肢 +
@@ -204,6 +214,7 @@ class SandOrder():
             '''
 
     def show_info(self, index, item):
+        '''選択項目についての一連の情報を表示する'''
         return '''{0}\n{1}\n{2}\n{3}\n'''.format(
             self.title(index, item),
             self.show_url(),

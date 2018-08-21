@@ -2,13 +2,11 @@
 
 import sandwitch    # 自作したクラスをインポート
 
-# TODO 処理コードと表示コードを分ける
 print('これから選ぶもの：1.注文したいサンドイッチ 2.パン, 3.トッピング, 4.野菜, 5.ドレッシング')
 
 sand = sandwitch.SandOrder()
 
 # サンド
-#? 選択するまでの流れを一つの関数にまとめられないかなー、引数を指定する形で
 print(sand.show_info(1, 'サンド'))
 sands = sand.sands
 while True:
