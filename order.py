@@ -7,10 +7,22 @@ print('これから選ぶもの：1.注文したいサンドイッチ 2.パン, 
 
 
 # サンド
-sand = sandwitch.Sand(1, 'サンド')
+sand = sandwitch.SandOrder()
+# サンド
+print(sand.title(1, 'サンド'))
 print('こちらのサイトでそれぞれのサンドの写真が見れるよ！：{}'.format(sand.official_site()))
-print(sand.table_sand())
+print(sand.table('sand'))
 print(sand.attention())
+sands = sand.sands
+flag = False
+while flag == False:
+    try:
+        sand_num = int(input('注文したいサンドの数字を選んでね: '))
+        user_sand = sands[sand_num]
+        flag = True
+    except:
+        flag = False
+print('{}を選択したよ！'.format(user_sand))
 
 
 # パン
