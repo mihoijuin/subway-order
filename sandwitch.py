@@ -41,6 +41,9 @@ class SandOrder():
     def official_site(self):
         return 'https://www.subway.co.jp/menu/sandwich/'
 
+    def attention(self):
+        return '＊注意＊ 数字以外の値を入力すると、入力がやり直しになるよ！'
+
 class Sand(SandOrder):
     def __init__(self, index, item):
         super().__init__(index, item)
@@ -98,4 +101,3 @@ class Sand(SandOrder):
             except:
                 flag = False
         return 'それでは{}のカスタマイズを作っていこう！'.format(user_sand)
-
