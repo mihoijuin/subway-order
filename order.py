@@ -1,97 +1,17 @@
 # サブウェイの注文を事前に考えられる@コマンドライン操作
 
+import sandwitch    # 自作したクラスをインポート
+
 # TODO 処理コードと表示コードを分ける
-
-#? 繰り返し処理にできないかな？
-title = '==== {num}.{item} ==='
-
 print('これから選ぶもの：1.注文したいサンドイッチ 2.パン, 3.トッピング, 4.野菜, 5.ドレッシング')
 
-#? クラス化したりできないかな？
 
 # サンド
-print(title.format(num=1, item='サンド'))
-
-sand_dict ={
-    1: 'ローストビーフ',
-    2: '生ハムマスカルポーネ',
-    3: 'えびアボカド',
-    4: '照り焼きチキン',
-    5: 'BLT',
-    6: 'ローストチキン',
-    7: 'ターキーベーコンエッグ',
-    8: 'チーズローストチキン',
-    9: 'ターキーブレスト',
-    10: 'ツナ',
-    11: 'チリチキン',
-    12: 'アボカドベジー',
-    13: 'たまご',
-    14: 'べジーチーズ',
-    15: 'ベジーデライト'
-}
-
-sand_prices = {
-    'ローストビーフ': 590,
-    '生ハムマスカルポーネ': 520,
-    'えびアボカド': 500,
-    '照り焼きチキン': 480,
-    'BLT': 420,
-    'ローストチキン': 420,
-    'ターキーベーコンエッグ': 490,
-    'チーズローストチキン': 480,
-    'ターキーブレスト': 450,
-    'ツナ': 430,
-    'チリチキン': 410,
-    'アボカドベジー': 410,
-    'たまご': 390,
-    'べジーチーズ': 340,
-    'ベジーデライト': 300
-}
-
-print('こちらのサイトでそれぞれのサンドの写真が見れるよ！：https://www.subway.co.jp/menu/sandwich/')
-print('''
-    1: ローストビーフ（¥{beaf}),
-    2: 生ハムマスカルポーネ(¥{rawham}),
-    3: えびアボカド(¥{shrimp}),
-    4: 照り焼きチキン(¥{teriyaki}),
-    5: BLT(¥{blt}),
-    6: ローストチキン(¥{chikin}),
-    7: ターキーベーコンエッグ(¥{turkey_egg}),
-    8: チーズローストチキン(¥{chease_chikin}),
-    9: ターキーブレスト(¥{turkey}),
-    10: ツナ(¥{tuna}),
-    11: チリチキン(¥{chile}),
-    12: アボカドベジー(¥{avocado}),
-    13: たまご(¥{egg}),
-    14: べジーチーズ(¥{vege_cheese}),
-    15: ベジーデライト(¥{vege})
-    '''.format(
-        beaf=sand_prices['ローストビーフ'],
-        rawham=sand_prices['生ハムマスカルポーネ'],
-        shrimp=sand_prices['えびアボカド'],
-        teriyaki=sand_prices['照り焼きチキン'],
-        blt=sand_prices['BLT'],
-        chikin=sand_prices['ローストチキン'],
-        turkey_egg=sand_prices['ターキーベーコンエッグ'],
-        chease_chikin=sand_prices['チーズローストチキン'],
-        turkey=sand_prices['ターキーブレスト'],
-        tuna=sand_prices['ツナ'],
-        chile=sand_prices['チリチキン'],
-        avocado=sand_prices['アボカドベジー'],
-        egg=sand_prices['たまご'],
-        vege_cheese=sand_prices['べジーチーズ'],
-        vege=sand_prices['ベジーデライト']
-))
-
-while True:
-    try:
-        sand_num = input('注文したいサンドの数字を選んでね: ')
-        sand_num = int(sand_num)
-        user_sand = sand_dict[sand_num]
-        print('それでは{}のカスタマイズを作っていこう！'.format(user_sand))
-        break
-    except:
-        print('誤った値が入力されるみたい。。。もう一度やり直してみて！')
+sand = sandwitch.Sand(1, 'サンド')
+print('こちらのサイトでそれぞれのサンドの写真が見れるよ！：{}'.format(sand.official_site()))
+print(sand.table_sand())
+print(sand.attention())
+print(sand.choose_sand())
 
 
 # パン
