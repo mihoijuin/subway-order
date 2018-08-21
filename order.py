@@ -3,7 +3,7 @@
 # TODO 処理コードと表示コードを分ける
 
 #? 繰り返し処理にできないかな？
-title = '==== {num}.{item}の注文 ==='
+title = '==== {num}.{item} ==='
 
 print('これから選ぶもの：1.注文したいサンドイッチ 2.パン, 3.トッピング, 4.野菜, 5.ドレッシング')
 
@@ -163,7 +163,6 @@ print('''
     avocado=topping_prices['アボカド']
 ))
 
-# TODO トッピングを複数選択できるようにする
 while True:
     try:
         topping_dict ={
