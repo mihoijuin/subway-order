@@ -8,11 +8,8 @@ print('これから選ぶもの：1.注文したいサンドイッチ 2.パン, 
 sand = sandwitch.SandOrder()
 
 # サンド
-print(sand.title(1, 'サンド'))
-print(sand.show_url())
-print('こちらのサイトでそれぞれのサンドの写真が見れるよ！：{}'.format(sand.official_site()))
-print(sand.table('sand'))
-print(sand.attention())
+#? 選択するまでの流れを一つの関数にまとめられないかなー、引数を指定する形で
+print(sand.show_info(1, 'サンド'))
 sands = sand.sands
 flag = False
 while flag == False:
@@ -26,10 +23,7 @@ print('{}を選択したよ！'.format(user_sand))
 
 
 # パン
-print(sand.title(1, 'パン'))
-print(sand.show_url())
-print(sand.table('bread'))
-print(sand.attention())
+print(sand.show_info(1, 'パン'))
 breads = sand.breads
 while True:
     try:

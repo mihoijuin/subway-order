@@ -81,7 +81,7 @@ class SandOrder():
         return '{}を選択したよ！'.format(item)
 
     def table(self, item):
-        if item == 'sand':
+        if item == 'サンド':
             sand_prices = self.sand_prices
             return '''+ サンドイッチの選択肢 +
             1: ローストビーフ（¥{beaf}),
@@ -116,7 +116,7 @@ class SandOrder():
                 vege_cheese=sand_prices['べジーチーズ'],
                 vege=sand_prices['ベジーデライト']
                 )
-        elif item == 'bread':
+        elif item == 'パン':
             sands = self.sands
             self.bread_recommends = '''+ サンドイッチごとのオススメのパン +
                 - {rawham},{blt},{chicken},{cheese_chicken},{avocado}： ハニーオーツ
@@ -143,7 +143,7 @@ class SandOrder():
             return '''+ 選択肢 +\n1: ハニーオーツ, 2:ウィート, 3: セサミ, 4: ホワイト, 5: フラットブレッド
             {}
             '''.format(self.bread_recommends)
-        elif item == 'topping':
+        elif item == 'トッピング':
             topping_prices = self.topping_prices
             return '''+ トッピングの選択肢 +
             トッピングは有料でつけられるよ！トッピングをつけない場合は0を選択してね！
@@ -166,3 +166,10 @@ class SandOrder():
                 shrimp=topping_prices['えび'],
                 avocado=topping_prices['アボカド']
                 )
+    def show_info(self, index, item):
+        return '''{0}\n{1}\n{2}\n{3}\n'''.format(
+            self.title(index, item),
+            self.show_url(),
+            self.table(item),
+            self.attention()
+        )
