@@ -21,7 +21,6 @@ while flag == False:
         flag = False
 print('{}を選択したよ！'.format(user_sand))
 
-
 # パン
 print(sand.show_info(2, 'パン'))
 breads = sand.breads
@@ -51,40 +50,22 @@ while True:
         continue
 print(sand.show_choice(user_toppings))
 
-
 # 野菜
-print(title.format(num=4, item='野菜'))
-print('野菜は量をカスタマイズしたり、苦手なものを抜いたり出来るよ！')
-print('レタス、トマト、ピーマン、オニオン、ニンジン、オリーブ、ピクルス、ホットペッパーの順にカスタマイズの方法を一種類ずつ聞いていくね')
-print('''ちなみに管理人のお気に入りは
-    レタス: 通常量,
-    トマト: 通常量,
-    ピーマン: 上限,
-    オニオン: 上限,
-    オリーブ: 上限,
-    ニンジン: 抜き,
-    ピクルス: 上限,
-    ホットペッパー: 通常量
-だよ！''')
-
-veges = ['レタス', 'トマト', 'オニオン',  'ニンジン', 'オリーブ', 'ピクルス', 'ホットペッパー']
-
-amount_dict = {1: '通常量', 2: '多め', 3: '上限', 4: '少なめ', 5: '抜き'}
-
+print(sand.show_info(4, '野菜'))
+amount_dict = sand.amount_dict
+veges = sand.veges
 while True:
     try:
-        user_veges = []
+        user_vege_amounts = []
         for vege in veges:
             veg_num = int(input('{}の量（1: 通常量, 2: 多め, 3: 上限, 4: 少なめ 5: 抜き）: '.format(vege)))
-            user_veges.append(amount_dict[veg_num])
-
-        print('選択した野菜の量')
-        for vege in veges:
-            print('- {0}: {1}'.format(vege, user_veges[veges.index(vege)]))
+            user_vege_amounts.append(amount_dict[veg_num])
+        print('+ 選択した野菜の量一覧 +')
         break
     except:
-        print('誤った値が入力されるみたい。。。もう一度やり直してみて！')
-
+        continue
+for vege in veges:
+    print('- {0}: {1}'.format(vege, user_vege_amounts[veges.index(vege)]))
 
 
 # ドレッシング
