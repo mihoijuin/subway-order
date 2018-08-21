@@ -4,7 +4,7 @@ class SandOrder():
     def __init__(self, index, item):
         self.index = index
         self.item = item
-        self.sand_dict ={
+        self.sands ={
                 1: 'ローストビーフ',
                 2: '生ハムマスカルポーネ',
                 3: 'えびアボカド',
@@ -56,15 +56,15 @@ class Sand(SandOrder):
 
     def table_sand(self):
         sand_prices = self.sand_prices
-        return '''
+        return '''+ サンドイッチの選択肢 +
             1: ローストビーフ（¥{beaf}),
             2: 生ハムマスカルポーネ(¥{rawham}),
             3: えびアボカド(¥{shrimp}),
             4: 照り焼きチキン(¥{teriyaki}),
             5: BLT(¥{blt}),
-            6: ローストチキン(¥{chikin}),
+            6: ローストチキン(¥{chicken}),
             7: ターキーベーコンエッグ(¥{turkey_egg}),
-            8: チーズローストチキン(¥{chease_chikin}),
+            8: チーズローストチキン(¥{cheese_chicken}),
             9: ターキーブレスト(¥{turkey}),
             10: ツナ(¥{tuna}),
             11: チリチキン(¥{chile}),
@@ -78,9 +78,9 @@ class Sand(SandOrder):
                 shrimp=sand_prices['えびアボカド'],
                 teriyaki=sand_prices['照り焼きチキン'],
                 blt=sand_prices['BLT'],
-                chikin=sand_prices['ローストチキン'],
+                chicken=sand_prices['ローストチキン'],
                 turkey_egg=sand_prices['ターキーベーコンエッグ'],
-                chease_chikin=sand_prices['チーズローストチキン'],
+                cheese_chicken=sand_prices['チーズローストチキン'],
                 turkey=sand_prices['ターキーブレスト'],
                 tuna=sand_prices['ツナ'],
                 chile=sand_prices['チリチキン'],
@@ -92,15 +92,72 @@ class Sand(SandOrder):
 
     def choose_sand(self):
         '''数字以外を入力すると、再度入力を求める'''
-        sand_dict = self.sand_dict
+        sand_dict = self.sands
         flag = False
         while flag == False:
             try:
-                sand_num = input('注文したいサンドの数字を選んでね: ')
-                sand_num = int(sand_num)
+                sand_num = int(input('注文したいサンドの数字を選んでね: '))
                 user_sand = sand_dict[sand_num]
                 flag = True
             except:
                 flag = False
         return 'それでは{}のカスタマイズを作っていこう！'.format(user_sand)
 
+class Bread(SandOrder):
+    '''パンの選択をする際の処理をまとめたクラス'''
+    def __init__(self, index, item):
+        super().__init__(index, item)
+        self.breads = {
+            1: 'ハニーオーツ',
+            2: 'ウィート',
+            3: 'セサミ',
+            4: 'ホワイト',
+            5: 'フラットブレッド'
+        }
+
+    def title(self):
+        return '=== {}.{} ==='.format(self.index, self.item)
+
+    def table_bread(self):
+        return '''+ パンの選択肢 +
+        1:ハニーオーツ, 2:ウィート, 3:セサミ, 4:ホワイト, 5:フラットブレッド
+        '''
+
+    def show_recommends(self):
+        sands = self.sands
+        self.bread_recommends = '''+ サンドイッチごとのオススメのパン +
+            - {rawham},{blt},{chicken},{cheese_chicken},{avocado}： ハニーオーツ
+            - {beaf},{turkey},{vege_cheese},{vege}: ウィート
+            - {shrimp},{tuna}: セサミ
+            - {teriyaki},{turkey_egg},{chile},{egg}: フラットブレッド
+            '''.format(
+            beaf=sands[1],
+            rawham=sands[2],
+            shrimp=sands[3],
+            teriyaki=sands[4],
+            blt=sands[5],
+            chicken=sands[6],
+            turkey_egg=sands[7],
+            cheese_chicken=sands[8],
+            turkey=sands[9],
+            tuna=sands[10],
+            chile=sands[11],
+            avocado=sands[12],
+            egg=sands[13],
+            vege_cheese=sands[14],
+            vege=sands[15]
+            )
+        return self.bread_recommends
+
+    def choose_bread(self):
+        '''数字以外を入力すると、再度入力を求める'''
+        breads = self.breads
+        flag = False
+        while flag == False:
+            try:
+                bread_num = int(input('注文したいサンドの数字を選んでね: '))
+                user_bread = breads[bread_num]
+                flag = True
+            except:
+                flag = False
+        return '{}を選択したよ！'.format(user_bread)
