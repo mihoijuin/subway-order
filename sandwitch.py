@@ -140,7 +140,9 @@ class SandOrder():
                 vege_cheese=sands[14],
                 vege=sands[15]
                 )
-            return self.bread_recommends
+            return '''+ 選択肢 +\n1: ハニーオーツ, 2:ウィート, 3: セサミ, 4: ホワイト, 5: フラットブレッド
+            {}
+            '''.format(self.bread_recommends)
         elif item == 'topping':
             topping_prices = self.topping_prices
             return '''+ トッピングの選択肢 +
