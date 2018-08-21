@@ -23,7 +23,7 @@ print('{}を選択したよ！'.format(user_sand))
 
 
 # パン
-print(sand.show_info(1, 'パン'))
+print(sand.show_info(2, 'パン'))
 breads = sand.breads
 while True:
     try:
@@ -34,69 +34,22 @@ while True:
         continue
 print(sand.show_choice(user_bread))
 
-
 # トッピング
-topping_prices = {
-    'トッピングなし': 0,
-    'スライスチーズ': 40,
-    'クリームタイプチーズ': 90,
-    'マスカルポーネチーズ': 90,
-    'たまご': 60,
-    'ベーコン': 60,
-    'ツナ': 80,
-    'えび': 100,
-    'アボカド': 100
-}
-
-print(title.format(num=3, item='トッピング'))
-print('トッピングは有料でつけられるよ！')
-print('トッピングをつけない場合は0を選択してね！')
-
-print('写真を確認したい時はこちらのサイトを見てね: https://www.subway.co.jp/menu/sandwich/')
-print('''
-    0: トッピングなし,
-    1: スライスチーズ（2枚¥{cheese}）,
-    2: クリームタイプチーズ(20g¥{cream}),
-    3: マスカルポーネチーズ(20g¥{mascarpone}),
-    4: たまご(1スクープ¥{egg}),
-    5: ベーコン(2枚¥{bacon}),
-    6: ツナ(1スクープ¥{tuna}),
-    7: えび(5尾¥{shrimp}),
-    8: アボカド(35g¥{avocado})
-'''.format(
-    cheese=topping_prices['スライスチーズ'],
-    cream=topping_prices['クリームタイプチーズ'],
-    mascarpone=topping_prices['マスカルポーネチーズ'],
-    egg=topping_prices['たまご'],
-    bacon=topping_prices['ベーコン'],
-    tuna=topping_prices['ツナ'],
-    shrimp=topping_prices['えび'],
-    avocado=topping_prices['アボカド']
-))
-
+print(sand.show_info(3, 'トッピング'))
+toppings = sand.toppings
 while True:
     try:
-        topping_dict ={
-            0: 'トッピングなし',
-            1: 'スライスチーズ',
-            2: 'クリームタイプチーズ',
-            3: 'マスカルポーネチーズ',
-            4: 'たまご',
-            5: 'ベーコン',
-            6: 'ツナ',
-            7: 'えび',
-            8: 'アボカド'
-        }
         topping_times = int(input('何個トッピングする？数字を入力してね！: '))
-        user_toppings = []
+        user_topping_list = []
         for i in range(1, topping_times+1):
             topping_num = int(input('{}こ目の選びたいトッピングの数字を入力してね: '.format(i)))
-            user_topping = topping_dict[topping_num]
-            user_toppings.append(user_topping)
-            print('{}を選択したよ！'.format(user_topping))
+            user_topping = toppings[topping_num]
+            user_topping_list.append(user_topping)
+        user_toppings = ','.join(user_topping_list)
         break
     except:
-        print('誤った値が入力されるみたい。。。もう一度やり直してみて！')
+        continue
+print(sand.show_choice(user_toppings))
 
 
 # 野菜
