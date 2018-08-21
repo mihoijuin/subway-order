@@ -1,6 +1,8 @@
 
 class SandOrder():
-    def __init__(self):
+    def __init__(self, index, item):
+        self.index = index
+        self.item = item
         self.sand_dict ={
                 1: 'ローストビーフ',
                 2: '生ハムマスカルポーネ',
@@ -18,7 +20,6 @@ class SandOrder():
                 14: 'べジーチーズ',
                 15: 'ベジーデライト'
             }
-
         self.sand_prices = {
             'ローストビーフ': 590,
             '生ハムマスカルポーネ': 520,
@@ -37,15 +38,16 @@ class SandOrder():
             'ベジーデライト': 300
         }
 
-    def title(self, num, item):
-        return '=== {}.{}'.format(num, item)
-
     def official_site(self):
         return 'https://www.subway.co.jp/menu/sandwich/'
 
 class Sand(SandOrder):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, index, item):
+        super().__init__(index, item)
+
+    def title(self):
+        return '=== {}.{} ==='.format(self.index, self.item)
+
 
     def table_sand(self):
         sand_prices = self.sand_prices
@@ -97,7 +99,3 @@ class Sand(SandOrder):
                 flag = False
         return 'それでは{}のカスタマイズを作っていこう！'.format(user_sand)
 
-sand = Sand()
-
-print(sand.table_sand())
-print(sand.choose_sand())
