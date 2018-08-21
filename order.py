@@ -69,46 +69,21 @@ for vege in veges:
 
 
 # ドレッシング
-print(title.format(num=5, item='ドレッシング'))
-print('最後にドレッシングを選ぶよ！（ここまでお疲れ様でした...!!）')
-print('写真を確認したい時はこちらのサイトを見てね: https://www.subway.co.jp/menu/sandwich/')
-print('''
-    1: オイル&ビネガー　塩コショウ,
-    2: シーザードレッシング,
-    3: 野菜クリーミードレッシング,
-    4: ハニーマスタードソース,
-    5: わさび醤油ソース,
-    6: バジルソース（＊管理人お気に入り）,
-    7: バルサミコソース,
-    8: マヨネーズタイプ,
-    9: チリソース
-''')
-
+print(sand.show_info(5, 'ドレッシング'))
+souces = sand.souces
 while True:
+    souce_times = int(input('ドレッシングは何種類でもかけられるよ！何種類かける？数字を入力してね！:'))
     try:
-        souce_dict = {
-            1: 'オイル&ビネガー　塩コショウ',
-            2: 'シーザードレッシング',
-            3: '野菜クリーミードレッシング',
-            4: 'ハニーマスタードソース',
-            5: 'わさび醤油ソース',
-            6: 'バジルソース',
-            7: 'バルサミコソース',
-            8: 'マヨネーズタイプ',
-            9: 'チリソース'
-        }
-        souce_times = int(input('ドレッシングは何種類でもかけられるよ！何種類かける？数字を入力してね！:'))
         user_souces = []
         for i in range(1, souce_times+1):
             souce_num = int(input('{}種類目のドレッシングの番号を入力してね: '.format(i)))
-            user_souce = souce_dict[souce_num]
+            user_souce = souces[souce_num]
             user_souces.append(user_souce)
-            print('{}を選択したよ！'.format(user_souce))
+            print(sand.show_choice(user_souce))
         break
     except:
-        print('誤った値が入力されるみたい。。。もう一度やり直してみて！')
-
-
+        continue
+        
 # 結果
 print(title.format(num=6, item='結果'))
 
