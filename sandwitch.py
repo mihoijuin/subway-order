@@ -1,5 +1,6 @@
 
 class SandOrder():
+    '''複数の子クラスで使用する関数をまとめたクラス'''
     def __init__(self, index, item):
         self.index = index
         self.item = item
@@ -44,13 +45,14 @@ class SandOrder():
     def attention(self):
         return '＊注意＊ 数字以外の値を入力すると、入力がやり直しになるよ！'
 
+
 class Sand(SandOrder):
+    '''サンドイッチの選択をする際の処理をまとめたクラス'''
     def __init__(self, index, item):
         super().__init__(index, item)
 
     def title(self):
         return '=== {}.{} ==='.format(self.index, self.item)
-
 
     def table_sand(self):
         sand_prices = self.sand_prices
@@ -101,3 +103,4 @@ class Sand(SandOrder):
             except:
                 flag = False
         return 'それでは{}のカスタマイズを作っていこう！'.format(user_sand)
+
