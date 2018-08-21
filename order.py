@@ -5,9 +5,8 @@ import sandwitch    # 自作したクラスをインポート
 # TODO 処理コードと表示コードを分ける
 print('これから選ぶもの：1.注文したいサンドイッチ 2.パン, 3.トッピング, 4.野菜, 5.ドレッシング')
 
-
-# サンド
 sand = sandwitch.SandOrder()
+
 # サンド
 print(sand.title(1, 'サンド'))
 print(sand.show_url())
@@ -27,13 +26,20 @@ print('{}を選択したよ！'.format(user_sand))
 
 
 # パン
-bread = sandwitch.Bread(2, 'パン')
+print(sand.title(1, 'パン'))
+print(sand.show_url())
+print(sand.table('bread'))
+print(sand.attention())
+breads = sand.breads
+while True:
+    try:
+        bread_num = int(input('使いたいパンの数字を選んでね: '))
+        user_bread = breads[bread_num]
+        break
+    except:
+        continue
+print(sand.show_choice(user_bread))
 
-print(bread.title())
-print(bread.table_bread())
-print(bread.show_recommends())
-print(bread.attention())
-print(bread.choose_bread())
 
 # トッピング
 topping_prices = {
