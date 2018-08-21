@@ -83,25 +83,20 @@ while True:
     except:
         continue
 
-# 結果
-print(title.format(num=6, item='結果'))
-
-print('サンドイッチ: ', user_sand)
-
-print('【パン】', user_bread)
-
-topping_price = 0   # トッピング合計額を計算する用
-for user_topping in user_toppings:
-    print('【トッピング】')
-    print('-', user_topping)
-    # ここでトッピングの合計額を計算する
-    topping_price += topping_prices[user_topping]
-
-print('【野菜】')
+# 結果表示
+print('====== 結果発表 ======')
+print('お疲れ様！結果一覧を表示するね！')
+print('【サンドイッチ】：', user_sand)
+print('【パン】：', user_bread)
+print('【トッピング】：', user_toppings)
+print('【野菜】：')
 for vege in veges:
-    print('- {0}: {1}'.format(vege, user_veges[veges.index(vege)]))
-
-print('【ドレッシング】')
-for souce in user_souces:
-    print('- ', souce)
+    print('- {0}: {1}'.format(vege, user_vege_amounts[veges.index(vege)]))
+print('【ドレッシング】：', ','.join(user_souces))
+# 金額の計算
+topping_prices = sand.topping_prices
+sand_prices = sand.sand_prices
+topping_price = 0
+for user_topping in user_topping_list:
+    topping_price += topping_prices[user_topping]
 print('++ 【合計額】：{}円 ++'.format(sand_prices[user_sand] + topping_price))
