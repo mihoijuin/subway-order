@@ -42,7 +42,6 @@ class SandOrder():
             4: 'ホワイト',
             5: 'フラットブレッド'
         }
-
         self.toppings = {
             0: 'トッピングなし',
             1: 'スライスチーズ',
@@ -54,7 +53,6 @@ class SandOrder():
             7: 'えび',
             8: 'アボカド'
         }
-
         self.topping_prices = {
             'トッピングなし': 0,
             'スライスチーズ': 40,
@@ -66,6 +64,8 @@ class SandOrder():
             'えび': 100,
             'アボカド': 100
         }
+        self.amount_dict = {1: '通常量', 2: '多め', 3: '上限', 4: '少なめ', 5: '抜き'}
+        self.veges = ['レタス', 'トマト', 'オニオン',  'ニンジン', 'オリーブ', 'ピクルス', 'ホットペッパー']
 
     def show_url(self):
         url = 'https://www.subway.co.jp/menu/sandwich/'
@@ -166,6 +166,20 @@ class SandOrder():
                 shrimp=topping_prices['えび'],
                 avocado=topping_prices['アボカド']
                 )
+        elif item == '野菜':
+            return '''野菜は量をカスタマイズしたり、苦手なものを抜いたり出来るよ！\nレタス、トマト、ピーマン、オニオン、ニンジン、オリーブ、ピクルス、ホットペッパーの順にカスタマイズの方法を一種類ずつ聞いていくね
+                ちなみに管理人のお気に入りは
+                    レタス: 通常量,
+                    トマト: 通常量,
+                    ピーマン: 上限,
+                    オニオン: 上限,
+                    オリーブ: 上限,
+                    ニンジン: 抜き,
+                    ピクルス: 上限,
+                    ホットペッパー: 通常量
+                だよ！
+            '''
+
     def show_info(self, index, item):
         return '''{0}\n{1}\n{2}\n{3}\n'''.format(
             self.title(index, item),
