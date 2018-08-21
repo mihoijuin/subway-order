@@ -10,6 +10,7 @@ print('これから選ぶもの：1.注文したいサンドイッチ 2.パン, 
 sand = sandwitch.SandOrder()
 # サンド
 print(sand.title(1, 'サンド'))
+print(sand.show_url())
 print('こちらのサイトでそれぞれのサンドの写真が見れるよ！：{}'.format(sand.official_site()))
 print(sand.table('sand'))
 print(sand.attention())

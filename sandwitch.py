@@ -67,8 +67,9 @@ class SandOrder():
             'アボカド': 100
         }
 
-    def official_site(self):
-        return 'https://www.subway.co.jp/menu/sandwich/'
+    def show_url(self):
+        url = 'https://www.subway.co.jp/menu/sandwich/'
+        return 'こちらのサイトで写真が見れるよ！：{}'.format(url)
 
     def attention(self):
         return '＊注意＊ 数字以外の値を入力すると、入力がやり直しになるよ！'
