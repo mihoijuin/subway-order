@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Subwayに気軽に行きたくなるアプリ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <section id="result">
+      <h1>あなたの{{ user_sand }}カスタマイズ</h1>
+      <div class="result-item">
+        <h3>パン</h3>
+        <ul>
+          <li>{{ user_bread }}</li>
+        </ul>
+      </div>
+      <div class="result-item">
+        <h3>トッピング</h3>
+        <ul>
+          <!-- for文でリストから抜き出していく -->
+          <li>{{ user_topping }}</li>
+          <li>{{ user_topping }}</li>
+        </ul>
+      </div>
+      <div class="result-item">
+        <h3>野菜の量</h3>
+        <ul>
+          <!-- for文でリストから抜き出していく -->
+          <li>{{ user_vege }}</li>
+          <li>{{ user_vege }}</li>
+          <li>{{ user_vege }}</li>
+          <li>{{ user_vege }}</li>
+          <li>{{ user_vege }}</li>
+          <li>{{ user_vege }}</li>
+          <li>{{ user_vege }}</li>
+          <li>{{ user_vege }}</li>
+          <li>{{ user_vege }}</li>
+        </ul>
+      </div>
+      <div class="result-item">
+        <h3>ドレッシング</h3>
+        <ul>
+          <!-- for文でリストから抜き出していく -->
+          <li>{{ user_souce }}</li>
+          <li>{{ user_souce }}</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h2>おいしく食べてね</h2>
+    </section>
+  </body>
+ </html>
