@@ -1,160 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <title>Subwayに気軽に行きたくなるアプリ</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
-    <header>
-      <h1>気軽にサブウェイを食べよう！</h1>
-    </header>
-    <main>
-      <section class="top-copy">
-        <h1>かんたんサブウェイカスタマイズ</h1>
-      </div>
-      <section class="sand-choice">
-        <h2>サンドイッチを選ぼう！</h2>
-        <ul>
-          <li>サンド</li>
-          <li>サンド</li>
-          <li>サンド</li>
-          <li>サンド</li>
-          <li>サンド</li>
-          <li>サンド</li>
-          <li>サンド</li>
-          <li>サンド</li>
-          <li>サンド</li>
-          <li>サンド</li>
-          <li>サンド</li>
-          <li>サンド</li>
-          <li>サンド</li>
-          <li>サンド</li>
-          <li>サンド</li>
-        </ul>
-      </section>
-      <section class="bread-choice">
-        <h2>パンを選ぼう！</h2>
-        <ul>
-          <li>パン</li>
-          <li>パン</li>
-          <li>パン</li>
-          <li>パン</li>
-          <li>パン</li>
-        </ul>
-      </section>
-      <section class="toping-choice">
-        <h2>トッピングを選ぼう！</h2>
-        <ul>
-          <li>トッピング</li>
-          <li>トッピング</li>
-          <li>トッピング</li>
-          <li>トッピング</li>
-          <li>トッピング</li>
-          <li>トッピング</li>
-          <li>トッピング</li>
-          <li>トッピング</li>
-        </ul>
-      </section>
-      <section class="vege-choice">
-        <h2>野菜の量を選ぼう！</h2>
-        <div class="vege">
-          <h3>野菜</h3>
-          <ul>
-            <li>普通</li>
-            <li>多め</li>
-            <li>上限</li>
-            <li>少なめ</li>
-            <li>抜き</li>
-          </ul>
-        </div>
-        <div class="vege">
-          <h3>野菜</h3>
-          <ul>
-            <li>普通</li>
-            <li>多め</li>
-            <li>上限</li>
-            <li>少なめ</li>
-            <li>抜き</li>
-          </ul>
-        </div>
-        <div class="vege">
-          <h3>野菜</h3>
-          <ul>
-            <li>普通</li>
-            <li>多め</li>
-            <li>上限</li>
-            <li>少なめ</li>
-            <li>抜き</li>
-          </ul>
-        </div>
-        <div class="vege">
-          <h3>野菜</h3>
-          <ul>
-            <li>普通</li>
-            <li>多め</li>
-            <li>上限</li>
-            <li>少なめ</li>
-            <li>抜き</li>
-          </ul>
-        </div>
-        <div class="vege">
-          <h3>野菜</h3>
-          <ul>
-            <li>普通</li>
-            <li>多め</li>
-            <li>上限</li>
-            <li>少なめ</li>
-            <li>抜き</li>
-          </ul>
-        </div>
-        <div class="vege">
-          <h3>野菜</h3>
-          <ul>
-            <li>普通</li>
-            <li>多め</li>
-            <li>上限</li>
-            <li>少なめ</li>
-            <li>抜き</li>
-          </ul>
-        </div>
-        <div class="vege">
-          <h3>野菜</h3>
-          <ul>
-            <li>普通</li>
-            <li>多め</li>
-            <li>上限</li>
-            <li>少なめ</li>
-            <li>抜き</li>
-          </ul>
-        </div>
-        <div class="vege">
-          <h3>野菜</h3>
-          <ul>
-            <li>普通</li>
-            <li>多め</li>
-            <li>上限</li>
-            <li>少なめ</li>
-            <li>抜き</li>
-          </ul>
-        </div>
-      </section>
-      <section class="souce-choice">
-        <h2>ドレッシングを選ぼう！</h2>
-        <ul>
-          <li>ドレッシング</li>
-          <li>ドレッシング</li>
-          <li>ドレッシング</li>
-          <li>ドレッシング</li>
-          <li>ドレッシング</li>
-          <li>ドレッシング</li>
-          <li>ドレッシング</li>
-          <li>ドレッシング</li>
-        </ul>
-      </section>
-      <section class="check-result">
-        <a href="result.html">できあがり〜</a>
-      </section>
-    </main>
+    <div class="card">
+      <header>
+        <!-- ナビバー -->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-success">
+          <a class="navbar-brand" href="#">Play Sandwich</a>
+          <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+              aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                  <a class="dropdown-item" href="#">Action 1</a>
+                  <a class="dropdown-item" href="#">Action 2</a>
+                </div>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search">
+              <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <!-- トップメッセージ -->
+        <section class="card-body bg-warning text-center p-5">
+          <h1 class="card-title">Let's Make Your Sandwich!!</h1>
+          <p class="card-text">あなただけのサブウェイのサンドイッチを考えよう</p>
+        </section>
+
+        <!-- サンドイッチ -->
+        <section class="card-body text-center p-5">
+          <h3 class="m-5">まずはサンドイッチを選ぼう</h3>
+          <div class="container row">
+            <img src="http://placehold.jp/400x400.png" class="col-sm rounded ml-5" alt="">
+            <form class="btn-group col-sm d-inline-block" data-toggle="buttons">
+              <fieldset>
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="sand" id="" checked autocomplete="off">
+                  <p>サンド名1</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名2</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名3</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名4</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名5</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名6</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名7</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名8</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名9</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名10</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名11</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名12</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名13</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名14</p>
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="sand" id="" autocomplete="off">
+                  <p>サンド名15</p>
+                </label>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="card-footer text-muted">
+        Footer
+      </footer>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
- </html>
+</html>
