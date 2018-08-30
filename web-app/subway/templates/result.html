@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+
+  <title>Subwayに気軽に行きたくなるアプリ</title>
+</head>
+
+<body>
+  <header>
+    <div class="navbar navbar-expand-sm navbar-dark bg-success">
+      <a class="navbar-brand" href="index.html">Play Sandwich</a>
+    </div>
+  </header>
+
+  <section id="result">
+    <h2 class="text-center m-5">あなたの{{ user_sand }}カスタマイズ</h2>
+
+    <!-- パン -->
+    <div class="container p-5 bg-light w-75">
+      <div class="card text-center">
+        <img class="card-img-top" src="holder.js/100px180/" alt="">
+        <section class="card">
+          <h4 class="card-header">パン</h4>
+          <div class="card-body">
+            <p class="card-text">{{ user_bread }}</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- トッピング -->
+    <div class="container p-5 bg-light w-75">
+      <div class="card text-center">
+        <img class="card-img-top" src="holder.js/100px180/" alt="">
+        <section class="card">
+          <h4 class="card-header">トッピング</h4>
+          <div class="card-body">
+            <ul class="list-unstyled">
+              <!-- 繰り返し処理で入れる -->
+              <li class="card-text">{{ user_topping }}</li>
+              <li class="card-text">{{ user_topping }}</li>
+              <li class="card-text">{{ user_topping }}</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 野菜 -->
+    <div class="container p-5 bg-light w-75">
+      <div class="card text-center">
+        <img class="card-img-top" src="holder.js/100px180/" alt="">
+        <section class="card">
+          <h4 class="card-header">野菜の量</h4>
+          <div class="card-body">
+            <ul class="list-unstyled">
+              <!-- 繰り返し処理で入れる（野菜はインデックスで） -->
+              <li class="card-text">{{vege}}：{{ user_vege_ammount }}</li>
+              <li class="card-text">{{vege}}：{{ user_vege_ammount }}</li>
+              <li class="card-text">{{vege}}：{{ user_vege_ammount }}</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- ドレッシング -->
+    <div class="container p-5 bg-light w-75">
+      <div class="card text-center">
+        <img class="card-img-top" src="holder.js/100px180/" alt="">
+        <section class="card">
+          <h4 class="card-header">ドレッシング</h4>
+          <div class="card-body">
+            <ul class="list-unstyled">
+              <!-- 繰り返し処理で入れる -->
+              <li class="card-text">{{ user_vege_souce }}</li>
+              <li class="card-text">{{ user_vege_souce }}</li>
+              <li class="card-text">{{ user_vege_souce }}</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <div class="container p-5 text-center">
+    <section>
+      <h3>Let's Enjoy Sandwich!!</h3>
+    </section>
+  </div>
+</body>
+
+</html>
