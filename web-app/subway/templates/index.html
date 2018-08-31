@@ -1,405 +1,367 @@
-<!doctype html>
-<html lang="ja">
+{% extends "base.html" %}
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% block body %}
+<main>
+  <!-- トップメッセージ -->
+  <section class="card-body bg-warning text-center p-5">
+    <h1 class="card-title">Let's Make Your Sandwich!!</h1>
+    <p class="card-text">あなただけのサブウェイのサンドイッチを考えよう</p>
+  </section>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-    crossorigin="anonymous">
-
-  <title>Subwayに気軽に行きたくなるアプリ</title>
-</head>
-
-<body>
-  <header>
-    <div class="navbar navbar-expand-sm navbar-dark bg-success">
-      <a class="navbar-brand" href="#">Play Sandwich</a>
+  <!-- サンドイッチ -->
+  <section>
+    <h3 class="m-5 p-5 text-center">まずはサンドイッチを選ぼう</h3>
+    <div class="container">
+      <div class="row">
+        <img src="http://placehold.jp/400x400.png" class="col-sm rounded" alt="">
+        <form class="btn-group col-sm d-inline-block" data-toggle="buttons">
+          <fieldset>
+            <label class="btn btn-secondary active">
+              <input type="radio" name="sand" id="" checked autocomplete="off">
+              <p>サンド名1</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名2</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名3</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名4</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名5</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名6</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名7</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名8</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名9</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名10</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名11</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名12</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名13</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名14</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>サンド名15</p>
+            </label>
+          </fieldset>
+        </form>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- トップメッセージ -->
-    <section class="card-body bg-warning text-center p-5">
-      <h1 class="card-title">Let's Make Your Sandwich!!</h1>
-      <p class="card-text">あなただけのサブウェイのサンドイッチを考えよう</p>
-    </section>
+  <!-- パン -->
+  <section>
+    <h3 class="m-5 p-5 text-center">パンを選ぼう</h3>
+    <div class="container">
+      <div class="row">
+        <form class="btn-group col-sm d-inline-block" data-toggle="buttons">
+          <fieldset>
+            <label class="btn btn-secondary active">
+              <input type="radio" name="sand" id="" checked autocomplete="off">
+              <p>パン1</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>パン2</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>パン3</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>パン4</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="sand" id="" autocomplete="off">
+              <p>パン5</p>
+            </label>
+          </fieldset>
+        </form>
+        <img src="http://placehold.jp/400x400.png" class="col-sm rounded" alt="">
+      </div>
+    </div>
+  </section>
 
-    <!-- サンドイッチ -->
-    <section>
-      <h3 class="m-5 p-5 text-center">まずはサンドイッチを選ぼう</h3>
-      <div class="container">
-        <div class="row">
-          <img src="http://placehold.jp/400x400.png" class="col-sm rounded" alt="">
-          <form class="btn-group col-sm d-inline-block" data-toggle="buttons">
-            <fieldset>
-              <label class="btn btn-secondary active">
-                <input type="radio" name="sand" id="" checked autocomplete="off">
-                <p>サンド名1</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名2</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名3</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名4</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名5</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名6</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名7</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名8</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名9</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名10</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名11</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名12</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名13</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名14</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>サンド名15</p>
-              </label>
-            </fieldset>
+  <!-- トッピング -->
+  <section>
+    <div class="m-5 p-5 text-center">
+      <h3>【有料】トッピングを選ぼう</h3>
+      <p>有料でお好みのトッピングを追加できるよ！</p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <img src="http://placehold.jp/400x400.png" class="col-sm rounded" alt="">
+        <form class="btn-group col-sm d-inline-block" data-toggle="buttons">
+          <fieldset>
+            <label class="btn btn-secondary active">
+              <input type="checkbox" name="topping" id="" checked autocomplete="off">
+              <p>トッピング1</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="checkbox" name="topping" id="" autocomplete="off">
+              <p>トッピング2</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="checkbox" name="topping" id="" autocomplete="off">
+              <p>トッピング3</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="checkbox" name="topping" id="" autocomplete="off">
+              <p>トッピング4</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="checkbox" name="topping" id="" autocomplete="off">
+              <p>トッピング5</p>
+            </label>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 野菜 -->
+  <section>
+    <h3 class="m-5 p-5 text-center">野菜の量を選ぼう</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <form class="form-check">
+            <label for="lettus" class="mr-4">レタス：</label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="lettus-amount" id="" value="checkedValue" checked> 普通
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="lettus-amount" id="" value=""> 多め
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="lettus-amount" id="" value=""> 上限
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="lettus-amount" id="" value=""> 少なめ
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="lettus-amount" id="" value=""> 抜き
+            </label>
+          </form>
+          <form class="form-check">
+            <label for="tomato" class="mr-4">トマト：</label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="tomato-amount" id="" value="checkedValue" checked> 普通
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="tomato-amount" id="" value=""> 多め
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="tomato-amount" id="" value=""> 上限
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="tomato-amount" id="" value=""> 少なめ
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="tomato-amount" id="" value=""> 抜き
+            </label>
+          </form>
+          <form class="form-check">
+            <label for="green" class="mr-4">ピーマン：</label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="green-amount" id="" value="checkedValue" checked> 普通
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="green-amount" id="" value=""> 多め
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="green-amount" id="" value=""> 上限
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="green-amount" id="" value=""> 少なめ
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="green-amount" id="" value=""> 抜き
+            </label>
+          </form>
+          <form class="form-check">
+            <label for="onion" class="mr-4">オニオン：</label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="onion-amount" id="" value="checkedValue" checked> 普通
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="onion-amount" id="" value=""> 多め
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="onion-amount" id="" value=""> 上限
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="onion-amount" id="" value=""> 少なめ
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="onion-amount" id="" value=""> 抜き
+            </label>
+          </form>
+          <form class="form-check">
+            <label for="carrot" class="mr-4">ニンジン：</label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="carrot-amount" id="" value="checkedValue" checked> 普通
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="carrot-amount" id="" value=""> 多め
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="carrot-amount" id="" value=""> 上限
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="carrot-amount" id="" value=""> 少なめ
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="carrot-amount" id="" value=""> 抜き
+            </label>
+          </form>
+          <form class="form-check">
+            <label for="olive" class="mr-4">オリーブ：</label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="olive-amount" id="" value="checkedValue" checked> 普通
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="olive-amount" id="" value=""> 多め
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="olive-amount" id="" value=""> 上限
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="olive-amount" id="" value=""> 少なめ
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="olive-amount" id="" value=""> 抜き
+            </label>
+          </form>
+          <form class="form-check">
+            <label for="pickles" class="mr-4">ピクルス：</label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="pickles-amount" id="" value="checkedValue" checked> 普通
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="pickles-amount" id="" value=""> 多め
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="pickles-amount" id="" value=""> 上限
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="pickles-amount" id="" value=""> 少なめ
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="pickles-amount" id="" value=""> 抜き
+            </label>
+          </form>
+          <form class="form-check">
+            <label for="hot" class="mr-4">ホットペッパー：</label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="hot-amount" id="" value="checkedValue" checked> 普通
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="hot-amount" id="" value=""> 多め
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="hot-amount" id="" value=""> 上限
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="hot-amount" id="" value=""> 少なめ
+            </label>
+            <label class="form-check-label mr-4">
+              <input type="radio" class="form-check-input" name="hot-amount" id="" value=""> 抜き
+            </label>
           </form>
         </div>
+        <img src="http://placehold.jp/400x400.png" class="col-sm rounded" alt="">
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- パン -->
-    <section>
-      <h3 class="m-5 p-5 text-center">パンを選ぼう</h3>
-      <div class="container">
-        <div class="row">
-          <form class="btn-group col-sm d-inline-block" data-toggle="buttons">
-            <fieldset>
-              <label class="btn btn-secondary active">
-                <input type="radio" name="sand" id="" checked autocomplete="off">
-                <p>パン1</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>パン2</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>パン3</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>パン4</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="sand" id="" autocomplete="off">
-                <p>パン5</p>
-              </label>
-            </fieldset>
-          </form>
-          <img src="http://placehold.jp/400x400.png" class="col-sm rounded" alt="">
-        </div>
+  <!-- ドレッシグ -->
+  <section>
+    <h3 class="m-5 p-5 text-center">ドレッシングを選ぼう</h3>
+    <div class="container">
+      <div class="row">
+        <img src="http://placehold.jp/400x400.png" class="col-sm rounded" alt="">
+        <form class="btn-group col-sm d-inline-block" data-toggle="buttons">
+          <fieldset>
+            <label class="btn btn-secondary active">
+              <input type="checkbox" name="souce" id="" checked autocomplete="off">
+              <p>ドレッシング1</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="checkbox" name="souce" id="" autocomplete="off">
+              <p>ドレッシング2</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="checkbox" name="souce" id="" autocomplete="off">
+              <p>ドレッシング3</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="checkbox" name="souce" id="" autocomplete="off">
+              <p>ドレッシング4</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="checkbox" name="souce" id="" autocomplete="off">
+              <p>ドレッシング5</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="checkbox" name="souce" id="" autocomplete="off">
+              <p>ドレッシング6</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="checkbox" name="souce" id="" autocomplete="off">
+              <p>ドレッシング7</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="checkbox" name="souce" id="" autocomplete="off">
+              <p>ドレッシング8</p>
+            </label>
+            <label class="btn btn-secondary">
+              <input type="checkbox" name="souce" id="" autocomplete="off">
+              <p>ドレッシング9</p>
+            </label>
+          </fieldset>
+        </form>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- トッピング -->
-    <section>
-      <div class="m-5 p-5 text-center">
-        <h3>【有料】トッピングを選ぼう</h3>
-        <p>有料でお好みのトッピングを追加できるよ！</p>
-      </div>
-      <div class="container">
-        <div class="row">
-          <img src="http://placehold.jp/400x400.png" class="col-sm rounded" alt="">
-          <form class="btn-group col-sm d-inline-block" data-toggle="buttons">
-            <fieldset>
-              <label class="btn btn-secondary active">
-                <input type="checkbox" name="topping" id="" checked autocomplete="off">
-                <p>トッピング1</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="checkbox" name="topping" id="" autocomplete="off">
-                <p>トッピング2</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="checkbox" name="topping" id="" autocomplete="off">
-                <p>トッピング3</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="checkbox" name="topping" id="" autocomplete="off">
-                <p>トッピング4</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="checkbox" name="topping" id="" autocomplete="off">
-                <p>トッピング5</p>
-              </label>
-            </fieldset>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- 野菜 -->
-    <section>
-      <h3 class="m-5 p-5 text-center">野菜の量を選ぼう</h3>
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <form class="form-check">
-              <label for="lettus" class="mr-4">レタス：</label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="lettus-amount" id="" value="checkedValue" checked> 普通
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="lettus-amount" id="" value=""> 多め
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="lettus-amount" id="" value=""> 上限
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="lettus-amount" id="" value=""> 少なめ
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="lettus-amount" id="" value=""> 抜き
-              </label>
-            </form>
-            <form class="form-check">
-              <label for="tomato" class="mr-4">トマト：</label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="tomato-amount" id="" value="checkedValue" checked> 普通
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="tomato-amount" id="" value=""> 多め
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="tomato-amount" id="" value=""> 上限
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="tomato-amount" id="" value=""> 少なめ
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="tomato-amount" id="" value=""> 抜き
-              </label>
-            </form>
-            <form class="form-check">
-              <label for="green" class="mr-4">ピーマン：</label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="green-amount" id="" value="checkedValue" checked> 普通
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="green-amount" id="" value=""> 多め
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="green-amount" id="" value=""> 上限
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="green-amount" id="" value=""> 少なめ
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="green-amount" id="" value=""> 抜き
-              </label>
-            </form>
-            <form class="form-check">
-              <label for="onion" class="mr-4">オニオン：</label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="onion-amount" id="" value="checkedValue" checked> 普通
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="onion-amount" id="" value=""> 多め
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="onion-amount" id="" value=""> 上限
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="onion-amount" id="" value=""> 少なめ
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="onion-amount" id="" value=""> 抜き
-              </label>
-            </form>
-            <form class="form-check">
-              <label for="carrot" class="mr-4">ニンジン：</label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="carrot-amount" id="" value="checkedValue" checked> 普通
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="carrot-amount" id="" value=""> 多め
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="carrot-amount" id="" value=""> 上限
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="carrot-amount" id="" value=""> 少なめ
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="carrot-amount" id="" value=""> 抜き
-              </label>
-            </form>
-            <form class="form-check">
-              <label for="olive" class="mr-4">オリーブ：</label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="olive-amount" id="" value="checkedValue" checked> 普通
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="olive-amount" id="" value=""> 多め
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="olive-amount" id="" value=""> 上限
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="olive-amount" id="" value=""> 少なめ
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="olive-amount" id="" value=""> 抜き
-              </label>
-            </form>
-            <form class="form-check">
-              <label for="pickles" class="mr-4">ピクルス：</label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="pickles-amount" id="" value="checkedValue" checked> 普通
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="pickles-amount" id="" value=""> 多め
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="pickles-amount" id="" value=""> 上限
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="pickles-amount" id="" value=""> 少なめ
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="pickles-amount" id="" value=""> 抜き
-              </label>
-            </form>
-            <form class="form-check">
-              <label for="hot" class="mr-4">ホットペッパー：</label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="hot-amount" id="" value="checkedValue" checked> 普通
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="hot-amount" id="" value=""> 多め
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="hot-amount" id="" value=""> 上限
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="hot-amount" id="" value=""> 少なめ
-              </label>
-              <label class="form-check-label mr-4">
-                <input type="radio" class="form-check-input" name="hot-amount" id="" value=""> 抜き
-              </label>
-            </form>
-          </div>
-          <img src="http://placehold.jp/400x400.png" class="col-sm rounded" alt="">
-        </div>
-      </div>
-    </section>
-
-    <!-- ドレッシグ -->
-    <section>
-      <h3 class="m-5 p-5 text-center">ドレッシングを選ぼう</h3>
-      <div class="container">
-        <div class="row">
-          <img src="http://placehold.jp/400x400.png" class="col-sm rounded" alt="">
-          <form class="btn-group col-sm d-inline-block" data-toggle="buttons">
-            <fieldset>
-              <label class="btn btn-secondary active">
-                <input type="checkbox" name="souce" id="" checked autocomplete="off">
-                <p>ドレッシング1</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="checkbox" name="souce" id="" autocomplete="off">
-                <p>ドレッシング2</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="checkbox" name="souce" id="" autocomplete="off">
-                <p>ドレッシング3</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="checkbox" name="souce" id="" autocomplete="off">
-                <p>ドレッシング4</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="checkbox" name="souce" id="" autocomplete="off">
-                <p>ドレッシング5</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="checkbox" name="souce" id="" autocomplete="off">
-                <p>ドレッシング6</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="checkbox" name="souce" id="" autocomplete="off">
-                <p>ドレッシング7</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="checkbox" name="souce" id="" autocomplete="off">
-                <p>ドレッシング8</p>
-              </label>
-              <label class="btn btn-secondary">
-                <input type="checkbox" name="souce" id="" autocomplete="off">
-                <p>ドレッシング9</p>
-              </label>
-            </fieldset>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section class="text-center bg-success mt-5">
-      <h3 class="text-white mt-5 p-5">完成したカスタマイズを確認しよう！</h3>
-      <a name="" id="" class="btn btn-outline-warning font-weight-bold mb-5 px-4 py-3" href="result.html" role="button">できあがり！</a>
-    </section>
-  </main>
-
-  <footer class="card-footer text-muted text-center p-3">
-    <small>&copy;2018 Porin All Rights Reserved</small>
-  </footer>
-  </div>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-</body>
-
-</html>
+  <section class="text-center bg-success mt-5">
+    <h3 class="text-white mt-5 p-5">完成したカスタマイズを確認しよう！</h3>
+    <a name="" id="" class="btn btn-outline-warning font-weight-bold mb-5 px-4 py-3" href="{{ url_for('result') }}" role="button">できあがり！</a>
+  </section>
+</main>
+{% endblock %}
