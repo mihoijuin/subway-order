@@ -1,10 +1,19 @@
 from flask import render_template
 from subway import app
 
+
 @app.route('/')
 def toppage():
-    return render_template('index.html')
+    title='Play Sandwich'
+    return render_template(
+        'index.html',
+        title=title
+    )
+
 
 @app.route('/result')
 def result():
-    return render_template('result.html')
+    title='Play Sandwich'
+    return render_template(
+        'result.html',
+        title=title)
