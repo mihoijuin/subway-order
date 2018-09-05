@@ -20,10 +20,10 @@
       <!-- サンド選択 -->
       <section>
         <h3>{{ form.sand.label }}</h3>
-        {% for sandchoice in form.sand %}
+        {% for sand_choice in form.sand %}
         <tr>
-          <td>{{ sandchoice }}</td>
-          <td>{{ sandchoice.label }}</td>
+          <td>{{ sand_choice }}</td>
+          <td>{{ sand_choice.label }}</td>
         </tr>
         {% endfor %}
       </section>
@@ -31,10 +31,10 @@
       <!-- パン選択 -->
       <section>
         <h3>{{ form.bread.label }}</h3>
-        {% for breadchoice in form.bread %}
+        {% for bread_choice in form.bread %}
         <tr>
-          <td>{{ breadchoice }}</td>
-          <td>{{ breadchoice.label }}</td>
+          <td>{{ bread_choice }}</td>
+          <td>{{ bread_choice.label }}</td>
         </tr>
         {% endfor %}
       </section>
@@ -42,11 +42,11 @@
       <!-- トッピングを選択 -->
       <section>
         <h3>{{ form.topping.label }}</h3>
-        <p>トッピングをつけたくない場合は"なし"を選択してね</p>
-        {% for toppingchoice in form.topping %}
+        <p>トッピングは複数選ぶこともできるよ！</p>
+        {% for topping_choice in form.topping %}
         <tr>
-          <td>{{ toppingchoice }}</td>
-          <td>{{ toppingchoice.label }}</td>
+          <td>{{ topping_choice }}</td>
+          <td>{{ topping_choice.label }}</td>
         </tr>
         {% endfor %}
       </section>
@@ -136,6 +136,17 @@
         </div>
       </section>
 
+      <!-- ドレッシングを選択 -->
+      <section>
+        <h3>{{ form.source.label }}</h3>
+        <p>ドレッシングは複数選ぶこともできるよ！</p>
+        {% for source_choice in form.source %}
+        <tr>
+          <td>{{ source_choice }}</td>
+          <td>{{ source_choice.label }}</td>
+        </tr>
+        {% endfor %}
+      </section>
 
     </form>
   </section>
