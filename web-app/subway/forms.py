@@ -2,13 +2,13 @@
 from wtforms import RadioField, SubmitField, SelectMultipleField
 from wtforms.validators import Required
 from wtforms.widgets import ListWidget, CheckboxInput
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 
 class MultiCheckboxField(SelectMultipleField):
     widget = ListWidget(prefix_label=False)
     option_widget = CheckboxInput()
 
-class SandwichForms(Form):
+class SandwichForms(FlaskForm):
     # サンド
     sand = RadioField('サンドイッチを選ぼう', [Required(message='サンドイッチはどれか一つを選んでね')], choices=[
         ('beaf', 'ローストビーフ'),
