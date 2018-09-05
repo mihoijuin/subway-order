@@ -4,7 +4,7 @@ from wtforms.validators import Required
 from flask_wtf import Form
 
 class SandwichForms(Form):
-    sand = RadioField('サンドイッチを選択してね', [Required(message='どれか一つ選んでね')], choices=[
+    sand = RadioField('サンドイッチを選択してね', [Required(message='サンドイッチはどれか一つを選んでね')], choices=[
         ('beaf', 'ローストビーフ'),
         ('rawham', '生ハムマスカルポーネ'),
         ('shrimp', 'えびアボカド'),
@@ -20,4 +20,11 @@ class SandwichForms(Form):
         ('egg', 'たまご'),
         ('vege_cheese', 'べジーチーズ'),
         ('vege', 'ベジーデライト')
+    ])
+    bread = RadioField('パンを選択してね', [Required(message='パンはどれか一つを選んでね')], choices=[
+        ('honey', 'ハニーオーツ'),
+        ('wheet', 'ウィート'),
+        ('sesame', 'セサミ'),
+        ('white', 'ホワイト'),
+        ('flat', 'フラットブレッド')
     ])
