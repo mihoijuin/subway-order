@@ -19,6 +19,9 @@
 
 <body>
   <header>
+  {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %}
     <div class="navbar navbar-expand-sm navbar-dark bg-success">
       <a class="navbar-brand" href="{{ url_for('toppage') }}">Play Sandwich</a>
     </div>
