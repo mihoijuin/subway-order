@@ -1,4 +1,4 @@
-from flask import render_template, request
+from flask import render_template, request, redirect, url_for, flash
 from subway import app
 from subway.forms import SandwichForms
 
@@ -15,7 +15,7 @@ def toppage():
 @app.route('/result', methods = ['POST'])
 def result():
     title='Play Sandwich'
-    if request.form:
+    if request.form.getlist('topping') and request.form.getlist('source'):
         user_sand = request.form['sand']
         user_bread = request.form['bread']
         user_toppings = request.form.getlist('topping')
@@ -29,7 +29,10 @@ def result():
         pickles_amount = request.form['pickles']
         hot_amount = request.form['hot']
         user_sources = request.form.getlist('source')
-        return render_template(
+    else:
+        flash('全てのフォームに記入してください')
+        return redirect(url_for('toppage'))
+    return render_template(
             'result.html',
             title=title,
             user_sand=user_sand,
@@ -44,4 +47,4 @@ def result():
             pickles_amount=pickles_amount,
             hot_amount=hot_amount,
             user_sources=user_sources,
-            )
+        )

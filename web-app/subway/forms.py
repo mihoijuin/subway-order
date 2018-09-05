@@ -10,7 +10,7 @@ class MultiCheckboxField(SelectMultipleField):
 
 class SandwichForms(FlaskForm):
     # サンド
-    sand = RadioField('サンドイッチを選ぼう', [Required(message='サンドイッチはどれか一つを選んでね')], choices=[
+    sand = RadioField('サンドイッチを選ぼう', default='ローストビーフ', validators=[Required()], choices=[
         ('ローストビーフ', 'ローストビーフ'),
         ('生ハムマスカルポーネ', '生ハムマスカルポーネ'),
         ('えびアボカド', 'えびアボカド'),
@@ -28,7 +28,7 @@ class SandwichForms(FlaskForm):
         ('ベジーデライト', 'ベジーデライト')
     ])
     # パン
-    bread = RadioField('パンを選ぼう', [Required(message='パンはどれか一つを選んでね')], choices=[
+    bread = RadioField('パンを選ぼう', default='ハニーオーツ', validators=[Required()], choices=[
         ('ハニーオーツ', 'ハニーオーツ'),
         ('ウィート', 'ウィート'),
         ('セサミ', 'セサミ'),
@@ -36,7 +36,7 @@ class SandwichForms(FlaskForm):
         ('フラットブレッド', 'フラットブレッド')
     ])
     # トッピング
-    topping = MultiCheckboxField('【有料】トッピングを選ぼう', [Required(message='トッピングをつけたくない場合は無しを選択してね')], choices=[
+    topping = MultiCheckboxField('【有料】トッピングを選ぼう', validators=[Required()], choices=[
         ('なし', 'なし'),
         ('スライスチーズ', 'スライスチーズ'),
         ('クリームタイプチーズ', 'クリームタイプチーズ'),
@@ -49,56 +49,56 @@ class SandwichForms(FlaskForm):
     ])
     # 野菜
     #? 繰り返し処理で書けそう？
-    lettus = RadioField('レタスの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+    lettus = RadioField('レタスの量', default='普通', validators=[Required()], choices=[
         ('普通', '普通'),
         ('多め', '多め'),
         ('上限', '上限'),
         ('少なめ', '少なめ'),
         ('抜き', '抜き')
     ])
-    tomato = RadioField('トマトの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+    tomato = RadioField('トマトの量', default='普通', validators=[Required()], choices=[
         ('普通', '普通'),
         ('多め', '多め'),
         ('上限', '上限'),
         ('少なめ', '少なめ'),
         ('抜き', '抜き')
     ])
-    green = RadioField('ピーマンの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+    green = RadioField('ピーマンの量', default='普通', validators=[Required()], choices=[
         ('普通', '普通'),
         ('多め', '多め'),
         ('上限', '上限'),
         ('少なめ', '少なめ'),
         ('抜き', '抜き')
     ])
-    onion = RadioField('オニオンの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+    onion = RadioField('オニオンの量', default='普通', validators=[Required()], choices=[
         ('普通', '普通'),
         ('多め', '多め'),
         ('上限', '上限'),
         ('少なめ', '少なめ'),
         ('抜き', '抜き')
     ])
-    carrot = RadioField('ニンジンの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+    carrot = RadioField('ニンジンの量', default='普通', validators=[Required()], choices=[
         ('普通', '普通'),
         ('多め', '多め'),
         ('上限', '上限'),
         ('少なめ', '少なめ'),
         ('抜き', '抜き')
     ])
-    olive = RadioField('オリーブの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+    olive = RadioField('オリーブの量', default='普通', validators=[Required()], choices=[
         ('普通', '普通'),
         ('多め', '多め'),
         ('上限', '上限'),
         ('少なめ', '少なめ'),
         ('抜き', '抜き')
     ])
-    pickles = RadioField('ピクルスの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+    pickles = RadioField('ピクルスの量', default='普通', validators=[Required()], choices=[
         ('普通', '普通'),
         ('多め', '多め'),
         ('上限', '上限'),
         ('少なめ', '少なめ'),
         ('抜き', '抜き')
     ])
-    hot = RadioField('ホットペッパーの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+    hot = RadioField('ホットペッパーの量', default='普通', validators=[Required()], choices=[
         ('普通', '普通'),
         ('多め', '多め'),
         ('上限', '上限'),
@@ -106,7 +106,7 @@ class SandwichForms(FlaskForm):
         ('抜き', '抜き')
     ])
     # ドレッシング
-    source = MultiCheckboxField('ドレッシングを選ぼう', [Required(message='ドレッシングをつけたくない場合は無しを選択してね')], choices=[
+    source = MultiCheckboxField('ドレッシングを選ぼう', validators=[Required()], choices=[
         ('オイル&ビネガー 塩コショウ', 'オイル&ビネガー 塩コショウ'),
         ('シーザードレッシング', 'シーザードレッシング'),
         ('野菜クリーミードレッシング', '野菜クリーミードレッシング'),
