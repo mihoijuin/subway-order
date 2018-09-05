@@ -1,7 +1,12 @@
 # メニューを選択するためのフォームを作成するクラス
 from wtforms import RadioField, SubmitField, SelectMultipleField
 from wtforms.validators import Required
+from wtforms.widgets import ListWidget, CheckboxInput
 from flask_wtf import Form
+
+class MultiCheckboxField(SelectMultipleField):
+    widget = ListWidget(prefix_label=False)
+    option_widget = CheckboxInput()
 
 class SandwichForms(Form):
     sand = RadioField('サンドイッチを選択してね', [Required(message='サンドイッチはどれか一つを選んでね')], choices=[
