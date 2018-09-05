@@ -117,3 +117,5 @@ class SandwichForms(Form):
         ('mayo', 'マヨネーズタイプ'),
         ('chile', 'チリソース')
     ])
+
+    submit = SubmitField('できあがり！')
