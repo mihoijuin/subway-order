@@ -39,6 +39,18 @@
         {% endfor %}
       </div>
 
+      <!-- トッピングを選択 -->
+      <div>
+        <h2>{{ form.topping.label }}</h2>
+        <p>トッピングをつけたくない場合は"なし"を選択してね</p>
+        {% for toppingchoice in form.topping %}
+        <tr>
+          <td>{{ toppingchoice }}</td>
+          <td>{{ toppingchoice.label }}</td>
+        </tr>
+        {% endfor %}
+      </div>
+
 
     </form>
   </section>
