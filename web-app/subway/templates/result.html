@@ -2,8 +2,47 @@
 {% block body %}
 
   <section id="result">
-    <h2 class="text-center m-5">あなたのカスタマイズ</h2>
+    <h2 class="text-center m-5">あなたが選んだ{{ user_sand }}サンドのカスタマイズ</h2>
+    <!-- パン -->
+    <section>
+      <h3>パンの種類</h3>
+      <p>{{ user_bread }}</p>
+    </section>
 
+    <!-- トッピング -->
+    <section>
+      <h3>トッピング</h3>
+      <ul>
+      {% for user_topping in user_toppings %}
+        <li>{{ user_topping }}</li>
+      {% endfor %}
+      </ul>
+    </section>
+
+    <!-- 野菜の量 -->
+    <!-- テンプレートに「〇〇の量：普通」表示する繰り返し処理が思いつかないため、暫定的に野菜も一個ずつ変数に格納 -->
+    <section>
+      <h3>野菜の量</h3>
+      <ul>
+        <li>レタスの量：{{ lettus_amount }}</li>
+        <li>トマトの量：{{ tomato_amount }}</li>
+        <li>ピーマンの量：{{ green_amount }}</li>
+        <li>オニオンの量：{{ onion_amount }}</li>
+        <li>ニンジンの量：{{ carrot_amount }}</li>
+        <li>オリーブの量：{{ olive_amount }}</li>
+        <li>ピクルスの量：{{ pickles_amount }}</li>
+        <li>ホットペッパーの量：{{ hot_amount }}</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>ドレッシング</h3>
+      <ul>
+      {% for user_source in user_sources %}
+        <li>{{ user_source }}</li>
+      {% endfor %}
+      </ul>
+    </section>
 
   <div class="container p-5 text-center">
     <section>
