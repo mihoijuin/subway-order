@@ -43,5 +43,5 @@ def result():
             olive_amount=olive_amount,
             pickles_amount=pickles_amount,
             hot_amount=hot_amount,
-            user_source=user_sources,
+            user_sources=user_sources,
             )
