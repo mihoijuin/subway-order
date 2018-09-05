@@ -12,10 +12,13 @@ def toppage():
         form=form
     )
 
-
-@app.route('/result')
+@app.route('/result', methods = ['GET', 'POST'])
 def result():
     title='Play Sandwich'
-    return render_template(
-        'result.html',
-        title=title)
+    if request.method == 'POST':
+        result = request.form
+        return render_template(
+            'result.html',
+            title=title,
+            result=result
+            )

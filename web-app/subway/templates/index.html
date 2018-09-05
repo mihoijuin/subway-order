@@ -14,7 +14,7 @@
       <p class="error"><strong>Error:</strong>{{ error }}</p>
     {% endfor %}
 
-    <form action="/result" method="POST">
+    <form action="{{ url_for('result') }}" method="POST">
       {{ form.hidden_tag() }}
 
       <!-- サンド選択 -->
