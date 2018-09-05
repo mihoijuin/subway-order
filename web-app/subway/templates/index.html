@@ -9,7 +9,7 @@
   </section>
 
   <!-- 選択部分 -->
-  <section>
+  <div>
     {% for error in form.errors %}
       <p class="error"><strong>Error:</strong>{{ error }}</p>
     {% endfor %}
@@ -148,8 +148,12 @@
         {% endfor %}
       </section>
 
+      <!-- 送信 -->
+      <div>
+        {{ form.submit }}
+      </div>
     </form>
-  </section>
+  </div>
 
 </main>
 {% endblock %}
