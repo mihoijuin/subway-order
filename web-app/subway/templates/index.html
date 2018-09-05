@@ -14,6 +14,18 @@
       <p class="error"><strong>Error:</strong>{{ error }}</p>
     {% endfor %}
 
+    <form action="/result" method="POST">
+      {{ form.hidden_tag() }}
+      <div>
+        <h2>{{ form.sand.label }}</h2>
+        {% for sandchoice in form.sand %}
+        <tr>
+          <td>{{ sandchoice }}</td>
+          <td>{{ sandchoice.label }}</td>
+        </tr>
+        {% endfor %}
+      </div>
+    </form>
   </section>
 
 </main>
