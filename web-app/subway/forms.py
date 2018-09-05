@@ -48,6 +48,7 @@ class SandwichForms(Form):
         ('avocado', 'アボカド')
     ])
     # 野菜
+    #? 繰り返し処理で書けそう？
     lettus = RadioField('レタスの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
         ('normal', '普通'),
         ('larger', '多め'),
@@ -103,4 +104,16 @@ class SandwichForms(Form):
         ('largest', '上限'),
         ('smaller', '少なめ'),
         ('none', '抜き')
+    ])
+    # ドレッシング
+    source = MultiCheckboxField('ドレッシングを選ぼう', [Required(message='ドレッシングをつけたくない場合は無しを選択してね')], choices=[
+        ('oil', 'オイル&ビネガー 塩コショウ'),
+        ('caesar', 'シーザードレッシング'),
+        ('vege', '野菜クリーミードレッシング'),
+        ('honey', 'ハニーマスタードソース'),
+        ('wasabi', 'わさび醤油ソース'),
+        ('basil', 'バジルソース'),
+        ('balsamic', 'バルサミコソース'),
+        ('mayo', 'マヨネーズタイプ'),
+        ('chile', 'チリソース')
     ])
