@@ -15,19 +15,33 @@ def toppage():
 @app.route('/result', methods = ['POST'])
 def result():
     title='Play Sandwich'
-    vege_list = ['lettus', 'tomato', 'green', 'onion', 'carrot', 'olive', 'pickles', 'hot']
     if request.form:
         user_sand = request.form['sand']
         user_bread = request.form['bread']
         user_toppings = request.form.getlist('topping')
-        vege_amounts = [ request.form[i] for i in vege_list]
-        user_souces = request.form.getlist('source')
+        #! テンプレートに「〇〇の量：普通」表示する繰り返し処理が思いつかないため、暫定的に野菜も一個ずつ変数に格納
+        lettus_amount = request.form['lettus']
+        tomato_amount = request.form['tomato']
+        green_amount = request.form['green']
+        onion_amount = request.form['onion']
+        carrot_amount = request.form['carrot']
+        olive_amount = request.form['olive']
+        pickles_amount = request.form['pickles']
+        hot_amount = request.form['hot']
+        user_sources = request.form.getlist('source')
         return render_template(
             'result.html',
             title=title,
             user_sand=user_sand,
             user_bread=user_bread,
             user_toppings=user_toppings,
-            vege_amounts=vege_amounts,
-            user_souce=user_souces
+            lettus_amount=lettus_amount,
+            tomato_amount=tomato_amount,
+            green_amount=green_amount,
+            onion_amount=onion_amount,
+            carrot_amount=carrot_amount,
+            olive_amount=olive_amount,
+            pickles_amount=pickles_amount,
+            hot_amount=hot_amount,
+            user_source=user_sources,
             )
