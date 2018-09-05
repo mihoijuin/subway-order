@@ -8,5 +8,13 @@
     <p class="card-text">あなただけのサブウェイのサンドイッチを考えよう</p>
   </section>
 
+  <!-- 選択部分 -->
+  <section>
+    {% for error in form.errors %}
+      <p class="error"><strong>Error:</strong>{{ error }}</p>
+    {% endfor %}
+
+  </section>
+
 </main>
 {% endblock %}
