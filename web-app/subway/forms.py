@@ -9,6 +9,7 @@ class MultiCheckboxField(SelectMultipleField):
     option_widget = CheckboxInput()
 
 class SandwichForms(Form):
+    # サンド
     sand = RadioField('サンドイッチを選ぼう', [Required(message='サンドイッチはどれか一つを選んでね')], choices=[
         ('beaf', 'ローストビーフ'),
         ('rawham', '生ハムマスカルポーネ'),
@@ -26,6 +27,7 @@ class SandwichForms(Form):
         ('vege_cheese', 'べジーチーズ'),
         ('vege', 'ベジーデライト')
     ])
+    # パン
     bread = RadioField('パンを選ぼう', [Required(message='パンはどれか一つを選んでね')], choices=[
         ('honey', 'ハニーオーツ'),
         ('wheet', 'ウィート'),
@@ -33,6 +35,7 @@ class SandwichForms(Form):
         ('white', 'ホワイト'),
         ('flat', 'フラットブレッド')
     ])
+    # トッピング
     topping = MultiCheckboxField('【有料】トッピングを選ぼう', [Required(message='トッピングをつけたくない場合は無しを選択してね')], choices=[
         ('none', 'なし'),
         ('cheese', 'スライスチーズ'),
@@ -43,4 +46,61 @@ class SandwichForms(Form):
         ('tuna', 'ツナ'),
         ('shrimp', 'えび'),
         ('avocado', 'アボカド')
+    ])
+    # 野菜
+    lettus = RadioField('レタスの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+        ('normal', '普通'),
+        ('larger', '多め'),
+        ('largest', '上限'),
+        ('smaller', '少なめ'),
+        ('none', '抜き')
+    ])
+    tomato = RadioField('トマトの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+        ('normal', '普通'),
+        ('larger', '多め'),
+        ('largest', '上限'),
+        ('smaller', '少なめ'),
+        ('none', '抜き')
+    ])
+    green = RadioField('ピーマンの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+        ('normal', '普通'),
+        ('larger', '多め'),
+        ('largest', '上限'),
+        ('smaller', '少なめ'),
+        ('none', '抜き')
+    ])
+    onion = RadioField('オニオンの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+        ('normal', '普通'),
+        ('larger', '多め'),
+        ('largest', '上限'),
+        ('smaller', '少なめ'),
+        ('none', '抜き')
+    ])
+    carrot = RadioField('ニンジンの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+        ('normal', '普通'),
+        ('larger', '多め'),
+        ('largest', '上限'),
+        ('smaller', '少なめ'),
+        ('none', '抜き')
+    ])
+    olive = RadioField('オリーブの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+        ('normal', '普通'),
+        ('larger', '多め'),
+        ('largest', '上限'),
+        ('smaller', '少なめ'),
+        ('none', '抜き')
+    ])
+    pickles = RadioField('ピクルスの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+        ('normal', '普通'),
+        ('larger', '多め'),
+        ('largest', '上限'),
+        ('smaller', '少なめ'),
+        ('none', '抜き')
+    ])
+    hot = RadioField('ホットペッパーの量', [Required(message='それぞれの野菜の量をどれか一つ選択してね')], choices=[
+        ('normal', '普通'),
+        ('larger', '多め'),
+        ('largest', '上限'),
+        ('smaller', '少なめ'),
+        ('none', '抜き')
     ])
