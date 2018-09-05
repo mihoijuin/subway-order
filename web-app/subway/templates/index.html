@@ -16,6 +16,8 @@
 
     <form action="/result" method="POST">
       {{ form.hidden_tag() }}
+
+      <!-- サンド選択 -->
       <div>
         <h2>{{ form.sand.label }}</h2>
         {% for sandchoice in form.sand %}
@@ -25,6 +27,19 @@
         </tr>
         {% endfor %}
       </div>
+
+      <!-- パン選択 -->
+      <div>
+        <h2>{{ form.bread.label }}</h2>
+        {% for breadchoice in form.bread %}
+        <tr>
+          <td>{{ breadchoice }}</td>
+          <td>{{ breadchoice.label }}</td>
+        </tr>
+        {% endfor %}
+      </div>
+
+
     </form>
   </section>
 
