@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
 
+  <!-- 通常CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
   <title>{{ title }}</title>
 
 </head>
@@ -22,8 +25,10 @@
   {% for message in get_flashed_messages() %}
     <div class=flash>{{ message }}</div>
   {% endfor %}
-    <div class="navbar navbar-expand-sm navbar-dark bg-success">
-      <a class="navbar-brand" href="{{ url_for('toppage') }}">Play Sandwich</a>
+    <div class="navbar navbar-expand-sm header">
+      <a class="navbar-brand" href="{{ url_for('toppage') }}">
+        <img src="{{ url_for('static', filename='images/logo_transparent.png') }}" alt="" width="150" height="150">
+      </a>
     </div>
   </header>
 
