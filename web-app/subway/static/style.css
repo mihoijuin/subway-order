@@ -130,4 +130,16 @@ p {
   font-size: 1.4rem;
   line-height: 1.7; }
 
+/* submit */
+.submit input {
+  border-radius: .3rem;
+  background-color: #ffc107;
+  border: solid 1px green;
+  color: green;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 1rem 1.5rem; }
+  .submit input:hover {
+    background-color: #edb100; }
+
 /*# sourceMappingURL=style.css.map */

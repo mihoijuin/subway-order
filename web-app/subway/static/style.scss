@@ -140,3 +140,20 @@ p {
   font-size: 1.4rem;
   line-height: 1.7;
 }
+
+/* submit */
+.submit {
+  input {
+    border-radius: .3rem;
+    background-color: #ffc107;
+    border: solid 1px green;
+    color: green;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+
+    &:hover {
+      background-color: darken(#ffc107, 5%);
+    }
+  }
+}
