@@ -23,7 +23,7 @@
 <body>
   <header>
   {% for message in get_flashed_messages() %}
-    <div class=flash>{{ message }}</div>
+    <div class="flash text-center alert alert-danger mb-0 py-5" role="alert">{{ message }}</div>
   {% endfor %}
     <div class="navbar navbar-expand-sm  bg-success">
       <a class="navbar-brand text-white font-weight-bold" href="{{ url_for('toppage') }}">PLAY SANDWICH</a>
