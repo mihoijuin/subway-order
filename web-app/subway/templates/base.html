@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
 
+  <!-- 通常CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
   <title>{{ title }}</title>
 
 </head>
@@ -20,16 +23,16 @@
 <body>
   <header>
   {% for message in get_flashed_messages() %}
-    <div class=flash>{{ message }}</div>
+    <div class="flash text-center alert alert-danger mb-0 py-5" role="alert">{{ message }}</div>
   {% endfor %}
-    <div class="navbar navbar-expand-sm navbar-dark bg-success">
-      <a class="navbar-brand" href="{{ url_for('toppage') }}">Play Sandwich</a>
+    <div class="navbar navbar-expand-sm  bg-success">
+      <a class="navbar-brand text-white font-weight-bold" href="{{ url_for('toppage') }}">PLAY SANDWICH</a>
     </div>
   </header>
 
   {% block body %}{% endblock %}
 
-  <footer class="card-footer text-muted text-center p-3">
+  <footer class="text-white bg-success text-center p-3">
     <small>&copy;2018 Porin All Rights Reserved</small>
   </footer>
   </div>

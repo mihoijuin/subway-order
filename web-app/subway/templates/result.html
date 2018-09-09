@@ -1,28 +1,35 @@
 {% extends "base.html" %}
 {% block body %}
 
-  <section id="result">
-    <h2 class="text-center m-5">あなたが選んだ{{ user_sand }}サンドのカスタマイズ</h2>
-    <!-- パン -->
-    <section>
-      <h3>パンの種類</h3>
-      <p>{{ user_bread }}</p>
-    </section>
+  <section id="result" class="bg-warning text-center p-5">
+    <h2 class="p-5">あなたが選んだ<span class="font-weight-bold border-bottom border-dark">{{ user_sand }}サンド</span>のカスタマイズ</h2>
+  </section>
 
-    <!-- トッピング -->
-    <section>
-      <h3>トッピング</h3>
+  <!-- パン -->
+  <div class="py-5 bg-light">
+    <section class="container text-center">
+      <h3 class="font-weight-bold my-4">パンの種類</h3>
+      <ul><li>{{ user_bread }}</li></ul>
+    </section>
+  </div>
+
+  <!-- トッピング -->
+  <div class="py-5">
+    <section class="container text-center">
+      <h3 class="font-weight-bold my-4">トッピング</h3>
       <ul>
       {% for user_topping in user_toppings %}
         <li>{{ user_topping }}</li>
       {% endfor %}
       </ul>
     </section>
+  </div>
 
-    <!-- 野菜の量 -->
+  <!-- 野菜の量 -->
+  <div class="py-5 bg-light">
     <!-- テンプレートに「〇〇の量：普通」表示する繰り返し処理が思いつかないため、暫定的に野菜も一個ずつ変数に格納 -->
-    <section>
-      <h3>野菜の量</h3>
+    <section class="container text-center py-5">
+      <h3 class="font-weight-bold my-4">野菜の量</h3>
       <ul>
         <li>レタスの量：{{ lettus_amount }}</li>
         <li>トマトの量：{{ tomato_amount }}</li>
@@ -34,19 +41,23 @@
         <li>ホットペッパーの量：{{ hot_amount }}</li>
       </ul>
     </section>
+  </div>
 
-    <section>
-      <h3>ドレッシング</h3>
+  <!-- ドレッシング -->
+  <div class="py-5">
+    <section class="container text-center py-5">
+      <h3 class="font-weight-bold my-4">ドレッシング</h3>
       <ul>
       {% for user_source in user_sources %}
         <li>{{ user_source }}</li>
       {% endfor %}
       </ul>
     </section>
+  </div>
 
-  <div class="container p-5 text-center">
-    <section>
-      <h3>Let's Enjoy Sandwich!!</h3>
+  <div class="py-5 bg-warning">
+    <section class="container text-center py-5">
+      <h3 class="font-weight-bold my-4">LET'S ENJOY YOUR SANDWICH!!</h3>
     </section>
   </div>
 {% endblock %}
