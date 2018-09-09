@@ -18,135 +18,145 @@
       {{ form.hidden_tag() }}
 
       <!-- サンド選択 -->
-      <section>
-        <h3>{{ form.sand.label }}</h3>
-        {% for sand_choice in form.sand %}
-        <tr>
-          <td>{{ sand_choice }}</td>
-          <td>{{ sand_choice.label }}</td>
-        </tr>
-        {% endfor %}
-      </section>
+      <div class="bg-light py-5">
+        <section class="container text-center py-5">
+          <h3 class="font-weight-bold mb-5 pt-5">{{ form.sand.label }}</h3>
+          {% for sand_choice in form.sand %}
+          <tr>
+            <td>{{ sand_choice }}</td>
+            <td>{{ sand_choice.label }}</td>
+          </tr>
+          {% endfor %}
+        </section>
+      </div>
 
       <!-- パン選択 -->
-      <section>
-        <h3>{{ form.bread.label }}</h3>
-        {% for bread_choice in form.bread %}
-        <tr>
-          <td>{{ bread_choice }}</td>
-          <td>{{ bread_choice.label }}</td>
-        </tr>
-        {% endfor %}
-      </section>
+      <div class="py-5">
+        <section class="container text-center py-5">
+          <h3 class="font-weight-bold mb-5 pt-5">{{ form.bread.label }}</h3>
+          {% for bread_choice in form.bread %}
+          <tr>
+            <td>{{ bread_choice }}</td>
+            <td>{{ bread_choice.label }}</td>
+          </tr>
+          {% endfor %}
+        </section>
+      </div>
 
       <!-- トッピングを選択 -->
-      <section>
-        <h3>{{ form.topping.label }}</h3>
-        <p>トッピングは複数選ぶこともできるよ！</p>
-        {% for topping_choice in form.topping %}
-        <tr>
-          <td>{{ topping_choice }}</td>
-          <td>{{ topping_choice.label }}</td>
-        </tr>
-        {% endfor %}
-      </section>
+      <div class="bg-light py-5">
+        <section class="container text-center py-5">
+          <h3 class="font-weight-bold pt-5">{{ form.topping.label }}</h3>
+          <p class="mb-5">トッピングは複数選ぶこともできるよ！</p>
+          {% for topping_choice in form.topping %}
+          <tr>
+            <td>{{ topping_choice }}</td>
+            <td>{{ topping_choice.label }}</td>
+          </tr>
+          {% endfor %}
+        </section>
+      </div>
 
       <!-- 野菜の量を選択 -->
-      <section>
-        <h3>野菜の量を選ぼう</h3>
-        <!-- レタス -->
-        <div>
-          <caption>{{ form.lettus.label }}：</caption>
-          {% for lettus_amount in form.lettus %}
-          <tr>
-            <td>{{ lettus_amount }}</td>
-            <td>{{ lettus_amount.label }}</td>
-          </tr>
-          {% endfor %}
-        </div>
-        <!-- トマト -->
-        <div>
-          <caption>{{ form.tomato.label }}：</caption>
-          {% for tomato_amount in form.tomato %}
-          <tr>
-            <td>{{ tomato_amount }}</td>
-            <td>{{ tomato_amount.label }}</td>
-          </tr>
-          {% endfor %}
-        </div>
-        <!-- ピーマン -->
-        <div>
-          <caption>{{ form.green.label }}：</caption>
-          {% for green_amount in form.green %}
-          <tr>
-            <td>{{ green_amount }}</td>
-            <td>{{ green_amount.label }}</td>
-          </tr>
-          {% endfor %}
-        </div>
-        <!-- オニオン -->
-        <div>
-          <caption>{{ form.onion.label }}：</caption>
-          {% for onion_amount in form.onion %}
-          <tr>
-            <td>{{ onion_amount }}</td>
-            <td>{{ onion_amount.label }}</td>
-          </tr>
-          {% endfor %}
-        </div>
-        <!-- ニンジン -->
-        <div>
-          <caption>{{ form.carrot.label }}：</caption>
-          {% for carrot_amount in form.carrot %}
-          <tr>
-            <td>{{ carrot_amount }}</td>
-            <td>{{ carrot_amount.label }}</td>
-          </tr>
-          {% endfor %}
-        </div>
-        <!-- オリーブ -->
-        <div>
-          <caption>{{ form.olive.label }}：</caption>
-          {% for olive_amount in form.olive %}
-          <tr>
-            <td>{{ olive_amount }}</td>
-            <td>{{ olive_amount.label }}</td>
-          </tr>
-          {% endfor %}
-        </div>
-        <!-- ピクルス -->
-        <div>
-          <caption>{{ form.pickles.label }}：</caption>
-          {% for pickles_amount in form.pickles %}
-          <tr>
-            <td>{{ pickles_amount }}</td>
-            <td>{{ pickles_amount.label }}</td>
-          </tr>
-          {% endfor %}
-        </div>
-        <!-- ホットペッパー -->
-        <div>
-          <caption>{{ form.hot.label }}：</caption>
-          {% for hot_amount in form.hot %}
-          <tr>
-            <td>{{ hot_amount }}</td>
-            <td>{{ hot_amount.label }}</td>
-          </tr>
-          {% endfor %}
-        </div>
-      </section>
+      <div class="py-5">
+        <section class="container text-center py-5">
+          <h3 class="font-weight-bold mb-5 pt-5">野菜の量を選ぼう</h3>
+          <!-- レタス -->
+          <div>
+            <caption>{{ form.lettus.label }}：</caption>
+            {% for lettus_amount in form.lettus %}
+            <tr>
+              <td>{{ lettus_amount }}</td>
+              <td>{{ lettus_amount.label }}</td>
+            </tr>
+            {% endfor %}
+          </div>
+          <!-- トマト -->
+          <div>
+            <caption>{{ form.tomato.label }}：</caption>
+            {% for tomato_amount in form.tomato %}
+            <tr>
+              <td>{{ tomato_amount }}</td>
+              <td>{{ tomato_amount.label }}</td>
+            </tr>
+            {% endfor %}
+          </div>
+          <!-- ピーマン -->
+          <div>
+            <caption>{{ form.green.label }}：</caption>
+            {% for green_amount in form.green %}
+            <tr>
+              <td>{{ green_amount }}</td>
+              <td>{{ green_amount.label }}</td>
+            </tr>
+            {% endfor %}
+          </div>
+          <!-- オニオン -->
+          <div>
+            <caption>{{ form.onion.label }}：</caption>
+            {% for onion_amount in form.onion %}
+            <tr>
+              <td>{{ onion_amount }}</td>
+              <td>{{ onion_amount.label }}</td>
+            </tr>
+            {% endfor %}
+          </div>
+          <!-- ニンジン -->
+          <div>
+            <caption>{{ form.carrot.label }}：</caption>
+            {% for carrot_amount in form.carrot %}
+            <tr>
+              <td>{{ carrot_amount }}</td>
+              <td>{{ carrot_amount.label }}</td>
+            </tr>
+            {% endfor %}
+          </div>
+          <!-- オリーブ -->
+          <div>
+            <caption>{{ form.olive.label }}：</caption>
+            {% for olive_amount in form.olive %}
+            <tr>
+              <td>{{ olive_amount }}</td>
+              <td>{{ olive_amount.label }}</td>
+            </tr>
+            {% endfor %}
+          </div>
+          <!-- ピクルス -->
+          <div>
+            <caption>{{ form.pickles.label }}：</caption>
+            {% for pickles_amount in form.pickles %}
+            <tr>
+              <td>{{ pickles_amount }}</td>
+              <td>{{ pickles_amount.label }}</td>
+            </tr>
+            {% endfor %}
+          </div>
+          <!-- ホットペッパー -->
+          <div>
+            <caption>{{ form.hot.label }}：</caption>
+            {% for hot_amount in form.hot %}
+            <tr>
+              <td>{{ hot_amount }}</td>
+              <td>{{ hot_amount.label }}</td>
+            </tr>
+            {% endfor %}
+          </div>
+        </section>
+      </div>
 
       <!-- ドレッシングを選択 -->
-      <section>
-        <h3>{{ form.source.label }}</h3>
-        <p>ドレッシングは複数選ぶこともできるよ！</p>
-        {% for source_choice in form.source %}
-        <tr>
-          <td>{{ source_choice }}</td>
-          <td>{{ source_choice.label }}</td>
-        </tr>
-        {% endfor %}
-      </section>
+      <div class="bg-light py-5">
+        <section class="container text-center py-5">
+          <h3 class="font-weight-bold pt-5">{{ form.source.label }}</h3>
+          <p class="mb-5">ドレッシングは複数選ぶこともできるよ！</p>
+          {% for source_choice in form.source %}
+          <tr>
+            <td>{{ source_choice }}</td>
+            <td>{{ source_choice.label }}</td>
+          </tr>
+          {% endfor %}
+        </section>
+      </div>
 
       <!-- 送信 -->
       <div>
