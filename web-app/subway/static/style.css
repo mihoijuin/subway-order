@@ -135,11 +135,14 @@ p {
   border-radius: .3rem;
   background-color: #ffc107;
   border: solid 1px green;
-  color: green;
+  color: #28a745;
   cursor: pointer;
   font-weight: bold;
-  padding: 1rem 1.5rem; }
+  padding: 1rem 1.5rem;
+  margin: 3rem 0; }
   .submit input:hover {
-    background-color: #edb100; }
+    background-color: #28a745;
+    border-color: green;
+    color: #ffc107; }
 
 /*# sourceMappingURL=style.css.map */
