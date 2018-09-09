@@ -25,16 +25,14 @@
   {% for message in get_flashed_messages() %}
     <div class=flash>{{ message }}</div>
   {% endfor %}
-    <div class="navbar navbar-expand-sm header">
-      <a class="navbar-brand" href="{{ url_for('toppage') }}">
-        <img src="{{ url_for('static', filename='images/logo_transparent.png') }}" alt="" width="150" height="150">
-      </a>
+    <div class="navbar navbar-expand-sm  bg-success">
+      <a class="navbar-brand text-white font-weight-bold" href="{{ url_for('toppage') }}">PLAY SANDWICH</a>
     </div>
   </header>
 
   {% block body %}{% endblock %}
 
-  <footer class="card-footer text-muted text-center p-3">
+  <footer class="text-white bg-success text-center p-3">
     <small>&copy;2018 Porin All Rights Reserved</small>
   </footer>
   </div>
